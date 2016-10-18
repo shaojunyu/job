@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>个人中心</title>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/reset.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/myself.css">
+</head>
+<body>
+	<div class="content">
+		<div class="info-box clearfix">
+			<div class="head-portrait">
+				<img src="<?php echo base_url();?>images/girl.png">
+				<p>暂未保障权益</p>
+			</div>
+			<div class="info">
+				<p class="name">华小科</p>
+				<p>等级：4.5（满级5）</p>
+				<p>学校：华中科技大学</p>
+				<p>手机：13166668888</p>
+				<a href="javascript:;" class="leader">领队管理入口</a>
+			</div>
+		</div>
+
+		<div class="money-and-integral clearfix">
+			<a href="javascript:;" class="money">
+				<p>钱包余额</p>
+				<p>359元</p>
+				<span>点击查看明细、工资及提现</span>
+			</a>
+			<a href="javascript:;" class="integral">
+				<p>当前积分</p>
+				<p>100分</p>
+				<span>积分换礼，感谢你</span>
+			</a>
+		</div>
+
+		<div class="guarantee">
+			<a href="javascript:;" class="get-guarantee">限时优惠 兼职保障4年仅9.9元</a>
+			<p>兼职保障<br>1、工资先行赔付，如果遇到商家不按照约定发工资，平台立即介入处理，并先行赔付兼职损失；<br>2、兼职保险，如果兼职过程中出现意外伤害，平台先行赔付医药费；<br>3、现在购买奖励100积分。</p>
+		</div>
+	</div>
+
+
+	<div class="bottom-bar">
+		<a href="javascript:;">我的兼职</a>
+		<a href="javascript:;">个人中心</a>
+	</div>
+</body>
+</html>
