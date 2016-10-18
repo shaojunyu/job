@@ -16,7 +16,7 @@ class Api extends CI_Controller{
 
     public function login(){
         $cellphone = $this->post_data->cellphone;
-        $password = $this->post_data->cellphone;
+        $password = $this->post_data->password;
         $this->load->model('User_model');
         $res = $this->User_model->login($cellphone,$password);
         if ($res){
