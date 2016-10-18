@@ -34,6 +34,18 @@ class User extends CI_Controller{
         $this->load->view('signup1_view',array('cellphone'=>$cellphone));
     }
 
+    public function signup2($cellphone){
+        if (empty($cellphone)){
+            header('Location:./signup1/');
+        }else{
+            $this->load->view('signup2_view',array('cellphone'=>$cellphone));
+        }
+    }
+
+    public function complete(){
+        
+    }
+
     public function myself(){
         
     }
