@@ -11,7 +11,7 @@
 	<div class="content">
 		<div class="info-box clearfix">
 			<div class="head-portrait">
-				<img src="<?php echo base_url();?>images/girl.png">
+				<img src="<?php echo base_url();?>images/<?php echo $this->session->userdata('sex')=='男'?'boy':'girl'; ?>.png">
 				<p>暂未保障权益</p>
 			</div>
 			<div class="info">
