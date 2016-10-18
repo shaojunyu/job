@@ -13,15 +13,15 @@
 		<p>四年兼职注册</p>
 	</div>
 
-	<form>
-		<input type="tel" class="phone" placeholder="手机号" value="<?php if(empty($cellphone)){echo '';}else{echo $cellphone;} ?>">
+	<form method="POST" action="../signup2">
+		<input type="tel" class="phone" name="cellphone" placeholder="手机号" value="<?php if(empty($cellphone)){echo '';}else{echo $cellphone;} ?>">
 
 		<div class="codes-box clearfix">
 			<input type="tel" class="codes" placeholder="输入验证码">
 			<a href="javascript:;" class="get">获取验证码</a>
 		</div>
 		
-		<a href="javascript:;" class="next">下一步</a>
+		<input type="submit" class="next" value="下一步">
 	</form>
 
 	<script type="text/javascript" src="<?php echo base_url();?>js/zepto.min.js"></script>
