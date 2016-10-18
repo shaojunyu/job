@@ -12,7 +12,13 @@ class User extends CI_Controller{
     }
 
     public function login(){
-        $this->load->view('user_login_view');
+        $cellphone = $this->input->post('cellphone');
+        if (empty($cellphone)){
+
+        }else{
+            $this->load->view('user_login_view',array('cellphone'=>$cellphone));
+        }
+
     }
 
     public function myself(){
