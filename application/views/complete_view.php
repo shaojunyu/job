@@ -80,18 +80,6 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="profession-wrapper clearfix">
-				<span class="mark">专业</span>
-				<div class="profession-box">
-					<a href="javascript:;" class="choose-profession">请选择你所在的专业</a>
-					<span class="icon profession-icon"></span>
-					<div class="profession item">
-						<a href="javascript:;">电信</a>
-						<a href="javascript:;">机械</a>
-					</div>
-				</div>
-			</div>
 			
 			<div class="grade-wrapper clearfix">
 				<span class="mark">年级</span>
@@ -110,16 +98,7 @@
 			<div class="dormitory-wrapper clearfix">
 				<span class="mark">宿舍</span>
 				<div class="dormitory-box">
-					<a href="javascript:;" class="choose-dormitory">选择所在楼栋</a>
-					<span class="icon dormitory-icon"></span>
-					<div class="dormitory item">
-						<a href="javascript:;">韵苑22栋</a>
-						<a href="javascript:;">韵苑23栋</a>
-						<a href="javascript:;">韵苑24栋</a>
-						<a href="javascript:;">韵苑25栋</a>
-						<a href="javascript:;">韵苑26栋</a>
-						<a href="javascript:;">韵苑27栋</a>
-					</div>
+					<input type="text" class="dormitory" placeholder="如：韵苑22栋">
 				</div>
 			</div>
 			<a href="javascript:;" class="next finish">填完啦</a>

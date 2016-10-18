@@ -132,7 +132,7 @@ a.click-boy {
 ::-webkit-scrollbar-thumb:window-inactive {
 	background-color: rgba(0, 0, 0, 0.6);
 }
-.intro {
+.intro3 {
 	text-align: center;
 	font-size: 1.25rem;
 	margin-top: 8rem;
@@ -170,7 +170,7 @@ form {
 	border: 1px solid #9b9b9b;
 	border-radius: 5px;
 }
-.college, .profession, .grade, .dormitory {
+.college, .profession, .grade {
 	width: 100%;
 	border: 1px solid #9b9b9b;
 	border-radius: 5px;
@@ -183,10 +183,17 @@ form {
 	height: 8.8rem;
 	overflow-y: scroll;
 }
-.icon {
+.dormitory {
+	width: 100%;
+	border: 1px solid #9b9b9b;
+	border-radius: 5px;
+	background-color: #fff;
+}
+.school-roll form span.icon {
 	position: absolute;
 	right: 0.6rem;
 	top: 0.85rem;
+	width: 0;
 	border-left: 0.4rem solid transparent;
 	border-right: 0.4rem solid transparent;
 	border-top: 0.8rem solid #474747;
