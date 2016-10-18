@@ -1,4 +1,12 @@
 $(function () {
+	var ordinary = "";
+	var skill = "";
+	var name = "";
+	var sex = "";
+	var qqNum = "";
+	var college = "";
+	var grade = "";
+	var dormitory = "";
 	//兼职选择
 	$(".items").tap(function () {
 		if( $(this).hasClass("click") ) {
@@ -14,12 +22,14 @@ $(function () {
 			$(".girl").removeClass("click-girl");
 		}
 		$(this).addClass("click-boy");
+		sex = "男";
 	});
 	$(".girl").tap(function () {
 		if( $(".boy").hasClass("click-boy") ) {
 			$(".boy").removeClass("click-boy");
 		}
 		$(this).addClass("click-girl");
+		sex = "女";
 	});
 
 	//选择学院
@@ -84,17 +94,89 @@ $(function () {
 
 	//下一步切换
 	$(".next1").tap(function () {
+		if($(".click").length === 0) {
+			showMsg("请至少选择一项");
+			return;
+		}
 		$(".choose-job").css("display", "none");
 		$(".complete-info").css("display", "block");
+		$(".ordinary .click").each(function (index) {
+			ordinary = ordinary + this.innerHTML + ",";
+		});
+		$(".skill .click").each(function (index) {
+			skill = skill + this.innerHTML + ",";
+		});
+		ordinary = ordinary === "" ? "" : ordinary.substr(0, ordinary.length-1);
+		skill = skill === "" ? "" : skill.substr(0, skill.length-1);
 	});
+
+	//第二步
 	$(".next2").tap(function () {
+		var reg = /^\d+$/g;
+		if( $(".name").val() === "" ) {
+			showMsg("请填写姓名");
+			return;
+		}
+		else if( sex === "" ) {
+			showMsg("请选择姓别");
+			return;
+		}
+		else if( !reg.test($(".qq").val()) ) {
+			showMsg("请填写正确的QQ号");
+			return;
+		}
+		name = $(".name").val();
+		qqNum = $(".qq").val();
 		$(".complete-info").css("display", "none");
 		$(".school-roll").css("display", "block");
 	});
 
 	//填完了
 	$(".finish").tap(function () {
-		
+		college = $(".choose-college").html();
+		grade = $(".choose-grade").html();
+		dormitory = $(".dormitory").val();
+		if(college === "请选择你所在的学院") {
+			showMsg("请选择你所在的学院");
+			return;
+		}
+		else if(grade === "选择年级") {
+			showMsg("请选择年级");
+			return;
+		}
+		else if(dormitory === "") {
+			showMsg("请选择宿舍");
+			return;
+		}
+
+		var data = {
+			name: name,
+			sex: sex,
+			QQ: qqNum,
+			college: college,
+			grade: grade,
+			dormitory: dormitory,
+			tag1: ordinary,
+			tag2: skill
+		};
+		$.ajax({
+	        url: '../api/submit_info',
+	        contentType: "application/json",
+	        dataType: "json",
+	        type: "POST",
+	        data: JSON.stringify(data),
+	        success: function(data) {
+	        	if(data.success) {
+	        		window.location.href = "../user/myself";
+	        	}
+				else {
+	        		showMsg(data.msg);
+	        	}
+	        },
+		    error: function(XMLHttpRequest, textStatus, errorThrown){  
+		        showMsg("请求失败，请刷新重试"); 
+		    }
+	    });
 	});
 });
 
@@ -106,4 +188,19 @@ function showItem(item) {
 	}
 	$('.item').hide();
 	item.show();
+}
+
+//消息显示框显示
+function showMsg(msg) {
+	$(".prompt-box").html(msg);
+	$(".prompt-box").show();
+	setTimeout(function () {
+		hideMsg();
+	}, 2000);
+}
+
+//消息显示框隐藏
+function hideMsg() {
+	$(".prompt-box").html("");
+	$(".prompt-box").hide();
 }
