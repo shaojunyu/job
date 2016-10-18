@@ -42,7 +42,7 @@
 <body>
 	<div class="content">
 		<p>完善信息才可以做兼职哦<br>送200积分</p>
-		<a href="/1" class="next">现在去完善，仅三步</a>
+		<a href="./complete_info/1" class="next">现在去完善，仅三步</a>
 	</div>
 </body>
 </html>
