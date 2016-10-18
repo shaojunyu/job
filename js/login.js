@@ -1,11 +1,147 @@
 $(function () {
-	
+	//初始时手机号切分
+	var val = $.trim($(".phone").val());
+	var str = "";
+	if(val.length > 3 && val.length <= 7) {
+		str = str.concat(val.substr(0, 3), "-", val.substr(3));
+	}
+	else if(val.length > 7) {
+		str = str.concat(val.substr(0, 3), "-", val.substr(3, 4), "-", val.substr(7));
+	}
+	$(".phone").val(str || val);
+
+	//手机输入处理
+	$(".phone").focus(function() { //获得焦点
+		if($(this).css("color") == "red") {
+			hideError($(this));
+			return;
+		}
+		$(this).val($(this).val().split("-").join(""));
+	});
+	$(".phone").blur(function() { //失去焦点
+		var val = $.trim($(this).val());
+		var str = "";
+
+		//判断是否是错误信息
+		if($(this).css("color") == "red") {
+			return;
+		}
+
+		//手机号切分
+		if(val.length > 3 && val.length <= 7) {
+			str = str.concat(val.substr(0, 3), "-", val.substr(3));
+		}
+		else if(val.length > 7) {
+			str = str.concat(val.substr(0, 3), "-", val.substr(3, 4), "-", val.substr(7));
+		}
+		$(this).val(str || val);
+	});
+
+	//密码输入处理
+	$(".password").focus(function() { //获得焦点
+		$(this).attr("type", "password");
+		if($(this).css("color") == "red") {
+			hideError($(this));
+		}
+	});
+
+	//密码登录
+	$(".next-by-passwd").tap(function () {
+		//验证手机号是否正确
+		var isPhoneOk = formMathod.phoneCheck($(".phone")[0]);
+		if(typeof isPhoneOk === "string") {
+			showError($(".phone"), isPhoneOk);
+			return;
+		}
+
+		//验证密码
+		var isPasswordOk = formMathod.passwdCheck($(".password")[0]);
+		if(typeof isPasswordOk === "string") {
+			$(".password").attr("type", "text");
+			showError($(".password"), isPasswordOk);
+			return;
+		}
+
+		//密码登录
+		var data = {
+			cellphone: $.trim($(".phone").val()).split("-").join(""),
+			password: $(".password").val()
+		};
+		console.log(data);
+		$.ajax({
+	        url: '../api/login',
+	        contentType: "application/json",
+	        dataType: "json",
+	        type: "POST",
+	        data: JSON.stringify(data),
+	        success: function(data) {
+	        	if(data.success) {
+	        		console.log('success');
+	        	}
+				else {
+	        		alert(data.msg);
+	        	}
+	        },
+		    error: function(XMLHttpRequest, textStatus, errorThrown){  
+		        alert("请求失败，请刷新重试"); 
+		    }
+	    });
+	});
+
+
+	//验证码输入处理
+	$(".codes").focus(function() { //获得焦点
+		if($(this).css("color") == "red") {
+			hideError($(this));
+		}
+	});
+
+	//获取短信验证码
+	$(".get").tap(function () {
+		var isPhoneOk = formMathod.phoneCheck($(".phone")[0]);
+		if(typeof isPhoneOk === "string") {
+			showError($(".phone"), isPhoneOk);
+			return;
+		}
+		else if($(this).html() !== "获取验证码") {
+			return;
+		}
+		//发送验证码
+		var phoneNum = $(".phone").val().split("-").join("");
+		var data = {
+			cellphone: phoneNum
+		};
+		
+		
+	});
+
+	//验证码登录
+	$(".next-by-codes").click(function () {
+		//验证手机号是否正确
+		var isPhoneOk = formMathod.phoneCheck($(".phone")[0]);
+		if(typeof isPhoneOk === "string") {
+			showError($(".phone"), isPhoneOk);
+			return;
+		}
+
+		//验证手机验证码
+		var smscode = $.trim($(".codes").val());
+		if(!smscode) {
+			showError($(".codes"), "请输入验证码");
+			return;
+		}
+
+		//发送验证码登录请求
+	});
 
 	//登录方式切换
 	var $loginByCodes = $(".login-codes");
 	var $loginByPasswd = $(".login-passwd");
 	$loginByCodes.tap(function () {
 		$(this).hide();
+		$(".phone").val("");
+		$(".password").val("");
+		$(".codes").val("");
 		$(".password-box").hide();
 		$(".next-by-passwd").hide();
 		$(".next-by-codes").css("display", "block");
@@ -14,6 +150,9 @@ $(function () {
 	});
 	$loginByPasswd.tap(function () {
 		$(this).hide();
+		$(".phone").val("");
+		$(".password").val("");
+		$(".codes").val("");
 		$(".codes-box").hide();
 		$(".next-by-codes").hide();
 		$(".next-by-passwd").css("display", "block");
@@ -79,10 +218,22 @@ function getDisable() {
 	var timer = setInterval(function () {
 		time--;
 		if(time === 0) {
-			$(".get").html("获取短信验证码");
+			$(".get").html("获取验证码");
 			clearInterval(timer);
 			return;
 		}
 		$(".get").html(time + "秒后重试");
 	}, 1000);
+}
+
+//显示错误提示
+function showError(inputElem, err) {
+	inputElem.css("color", "red");
+	inputElem.val(err);
+}
+
+//隐藏错误提示
+function hideError(inputElem) {
+	inputElem.css("color", "#000");
+	inputElem.val("");
 }
