@@ -1,0 +1,193 @@
+body {
+	background-color: #fff;
+}
+
+/* choose-job */
+.intro1 {
+	text-align: center;
+	font-size: 1.1rem;
+	margin-top: 4rem;
+}
+.ordinary, .skill {
+	width: 90%;
+	margin: 2.5rem auto;
+}
+.ordinary p, .skill p {
+	border-bottom: 1px solid #ccc;
+	font-size: 1.05rem;
+	line-height: 2rem;
+}
+.ordinary ul , .skill ul {
+	margin-top: 1rem;
+}
+.ordinary li, .skill li {
+	float: left;
+	width: 33.3%;
+	text-align: center;
+	margin: 0.6rem 0;
+}
+.ordinary a, .skill a {
+	display: inline-block;
+	width: 80%;
+	line-height: 1.8rem;
+	font-size: 1.05rem;
+	background-color: #fff;
+	border: 1px solid #4c4c4c;
+	border-radius: 5px;
+}
+a.click {
+	background-color: #ff6091;
+	color: #fff;
+	border-color: #ff168a;
+}
+.next {
+	display: block;
+	text-align: center;
+	background-color: #ff7043;
+	color: #fff;
+	margin: 18px auto;
+	width: 80%;
+	font-size: 1.15rem;
+	line-height: 2.5rem;
+	border-radius: 5px;
+	border: 1px solid #ff7043;
+}
+.next:active, .next:hover {
+	color: #fff;
+}
+
+/* complete-info */
+.complete-info {
+	display: none;
+}
+.intro2 {
+	text-align: center;
+	font-size: 1.25rem;
+	margin-top: 8rem;
+}
+form {
+	width: 80%;
+	margin: 2.5rem auto;
+}
+form p {
+	margin: 1rem 0;
+}
+form span {
+	display: inline-block;
+	width: 22%;
+	text-align: center;
+	line-height: 2.2rem;
+}
+form input {
+	width: 75%;
+	text-indent: 3px;
+	line-height: 2.2rem;
+	font-size: 1.1rem;
+	border: 1px solid #4c4c4c;
+	border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.gender {
+	display: inline-block;
+	width: 30%;
+	line-height: 2.2rem;
+	font-size: 1rem;
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 0 2%;
+	text-align: center;
+	border: 1px solid #111;
+}
+a.click-girl {
+	background-color: #ff6091;
+	color: #fff;
+	border: 1px solid #ff6091;
+}
+a.click-boy {
+	background-color: #23aeff;
+	color: #fff;
+	border: 1px solid #23aeff;
+}
+
+/* school-roll */
+.school-roll {
+	display: none;
+}
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    /* iScroll CSS, thanks */
+	background-color: rgba(0, 0, 0, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.9);
+	border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.intro {
+	text-align: center;
+	font-size: 1.25rem;
+	margin-top: 8rem;
+}
+form {
+	width: 90%;
+	margin: 2.5rem auto;
+}
+
+/* college-wrapper */
+.college-wrapper, .profession-wrapper, .grade-wrapper, .dormitory-wrapper {
+	margin-top: 1rem;
+}
+.mark {
+	width: 15%;
+	float: left;
+	font-size: 1.1rem;
+	line-height: 2.5rem;
+}
+.college-box, .profession-box, .grade-box, .dormitory-box {
+	float: left;
+	position: relative;
+	width: 85%;
+}
+.college-box a, .profession-box a, .grade-box a, .dormitory-box a {
+	display: block;
+	width: 100%;
+	text-indent: 5px;
+	font-size: 1.1rem;
+	line-height: 2.2rem;
+	background-color: #fff;
+}
+.choose-college, .choose-profession, .choose-grade, .choose-dormitory {
+	line-height: 2.5rem;
+	border: 1px solid #9b9b9b;
+	border-radius: 5px;
+}
+.college, .profession, .grade, .dormitory {
+	width: 100%;
+	border: 1px solid #9b9b9b;
+	border-radius: 5px;
+	position: absolute;
+	top: 2.5rem;
+	margin-top: 1px;
+	background-color: #fff;
+	display: none;
+	z-index: 11;
+	height: 8.8rem;
+	overflow-y: scroll;
+}
+.icon {
+	position: absolute;
+	right: 0.6rem;
+	top: 0.85rem;
+	border-left: 0.4rem solid transparent;
+	border-right: 0.4rem solid transparent;
+	border-top: 0.8rem solid #474747;
+}
