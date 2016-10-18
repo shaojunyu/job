@@ -34,7 +34,7 @@ class Api extends CI_Controller{
                 'sex'=>$this->post_data->sex,
                 'QQ'=>$this->post_data->QQ,
                 'college'=>$this->post_data->college,
-                'major'=>$this->post_data->major,
+//                'major'=>$this->post_data->major,
                 'grade'=>$this->post_data->grade,
                 'dormitory'=>$this->post_data->dormitory,
                 'tag1'=>$this->post_data->tag1,
