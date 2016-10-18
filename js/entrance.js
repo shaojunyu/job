@@ -36,6 +36,7 @@ $(function () {
 			e.preventDefault();
 			return;
 		}
+		$(".phone").val($(".phone").val().split("-").join(""));
 	});
 });
 
