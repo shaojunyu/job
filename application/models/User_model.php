@@ -82,7 +82,7 @@ class User_model extends CI_Model{
             $res = $res[0];
             $this->session->set_userdata($res);
         }else{
-            $this->db->insert('job_user',array('cellphone',$cellphone));
+            $this->db->insert('job_user',array('cellphone'=>$cellphone));
         }
     }
 

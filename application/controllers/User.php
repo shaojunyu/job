@@ -60,7 +60,11 @@ class User extends CI_Controller{
 
     public function myself(){
         $session_data = $this->session->userdata();
-//        if (empty($session_data['']))
+        if (empty($session_data['tag1']) or empty($session_data['tag2'])){
+            header('Location:./complete_info/1');
+        }else if (empty($session_data['name']) or empty($session_data['sex']) or empty($session_data[])){
+
+        }
 //        ?\$this->load->view('myself_view');
     }
 }
