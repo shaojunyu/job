@@ -44,7 +44,20 @@ class Api extends CI_Controller{
         }catch (exception $e){
             $this->echo_msg(false);
         }
+    }
 
+    public function signup(){
+        try{
+            $this->load->model('User_model');
+            $this->User_model->signup(
+                $this->post_data->cellphone,
+                $this->post_data->password,
+                $this->post_data->school
+                );
+            $this->echo_msg(true);
+        }catch (exception $e){
+            $this->echo_msg(false);
+        }
     }
 
     private function echo_msg($success=false, $msg=''){

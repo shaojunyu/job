@@ -34,7 +34,8 @@ class User extends CI_Controller{
         $this->load->view('signup1_view',array('cellphone'=>$cellphone));
     }
 
-    public function signup2($cellphone){
+    public function signup2(){
+        $cellphone = $this->input->post('cellphone');
         if (empty($cellphone)){
             header('Location:./signup1/');
         }else{
