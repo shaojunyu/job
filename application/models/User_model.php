@@ -81,6 +81,8 @@ class User_model extends CI_Model{
         if ($res){
             $res = $res[0];
             $this->session->set_userdata($res);
+        }else{
+            $this->db->insert(array('cellphone',$cellphone));
         }
     }
 
