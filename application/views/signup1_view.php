@@ -4,12 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<title>注册</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/signup1.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/reset.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/signup1.css">
 </head>
 <body>
 	<div class="logo">
-		<img src="images/logo.png">
+		<img src="<?php echo base_url();?>images/logo.png">
 		<p>四年兼职注册</p>
 	</div>
 
@@ -24,8 +24,8 @@
 		<a href="javascript:;" class="next">下一步</a>
 	</form>
 
-	<script type="text/javascript" src="js/zepto.min.js"></script>
-	<script type="text/javascript" src="js/touch.js"></script>
-	<script type="text/javascript" src="js/signup1.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/zepto.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/touch.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/signup1.js"></script>
 </body>
 </html>
