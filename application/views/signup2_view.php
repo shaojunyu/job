@@ -14,7 +14,7 @@
 	</div>
 
 	<form>
-		<input type="tel" class="phone" placeholder="请输入手机号">
+		<input type="tel" class="phone" placeholder="请输入手机号" value="<?php echo $cellphone;?>">
 		<div class="school-box">
 			<a href="javascript:;" class="choose">请选择您所在的学校</a>
 			<span class="icon"></span>
