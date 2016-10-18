@@ -14,7 +14,7 @@
 	</div>
 
 	<form>
-		<input type="tel" class="phone" placeholder="请输入手机号">
+		<input type="tel" class="phone" placeholder="手机号" value="<?php if(empty($cellphone)){echo '';}else{echo $cellphone;} ?>">
 
 		<div class="codes-box clearfix">
 			<input type="tel" class="codes" placeholder="输入验证码">
