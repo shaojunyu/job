@@ -160,14 +160,14 @@ $(function () {
 			tag2: skill
 		};
 		$.ajax({
-	        url: '../api/submit_info',
+	        url: '../../api/submit_info',
 	        contentType: "application/json",
 	        dataType: "json",
 	        type: "POST",
 	        data: JSON.stringify(data),
 	        success: function(data) {
 	        	if(data.success) {
-	        		window.location.href = "../user/myself";
+	        		window.location.href = "../myself";
 	        	}
 				else {
 	        		showMsg(data.msg);
