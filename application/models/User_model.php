@@ -76,6 +76,12 @@ class User_model extends CI_Model{
             $res = $res[0];
             $this->session->set_userdata($res);
         }
+        $this->db->where('cellphone',$cellphone);
+        $res = $this->db->get('job_user')->result_array();
+        if ($res){
+            $res = $res[0];
+            $this->session->set_userdata($res);
+        }
     }
 
     /**

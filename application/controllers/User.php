@@ -47,6 +47,7 @@ class User extends CI_Controller{
     }
 
     public function myself(){
-        
+        var_dump($this->session->userdata());
+//        ?\$this->load->view('myself_view');
     }
 }
