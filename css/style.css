@@ -1,0 +1,66 @@
+body {
+	background-color: #fff;
+}
+.logo {
+	width: 100%;
+	text-align: center;
+	margin-top: 4.5rem;
+	font-size: 1rem;
+}
+.logo img {
+	width: 40%;
+}
+form {
+	width: 67%;
+	margin: 2rem auto;
+}
+form input {
+	width: 100%;
+	font-size: 1.15rem;
+	line-height: 2.5rem;
+	border-radius: 5px;
+	border: 1px solid #9b9b9b;
+	text-indent: 2rem;
+}
+form a {
+	display: block;
+	text-align: center;
+	background-color: #ff7043;
+	color: #fff;
+	margin: 18px 0;
+	width: 100%;
+	font-size: 1.15rem;
+	line-height: 2.5rem;
+	border-radius: 5px;
+	border: 1px solid #ff7043;
+}
+form a:active, form a:hover {
+	color: #fff;
+}
+.phone {
+	background: #fff url('../images/phone.png') no-repeat 5px center;
+	background-size: 1.25rem;
+}
+.business {
+	display: block;
+	text-align: center;
+	width: 38%;
+	margin: 0 auto;
+	line-height: 2.2rem;
+	border-radius: 5px;
+	border: 1px solid #3f3f3f;
+	background-color: #fff;
+	font-size: 1.1rem;
+}
+@media screen and (max-width: 320px) {
+	form {
+		width: 80%;
+	}
+}
+footer {
+	position: absolute;
+	bottom: 0.5rem;
+	width: 100%;
+	text-align: center;
+	font-size: 1rem;
+}

@@ -1,0 +1,133 @@
+body {
+	background-color: #fff;
+}
+/* content */
+.content {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 4rem;
+}
+.title {
+	font-size: 1.3rem;
+	text-align: center;
+	line-height: 3rem;
+	margin-top: 1rem;
+}
+.integral-info {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding: 0.6rem 0;
+}
+.integral-info div {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.integral-info p {
+	width: 80%;
+	margin: 0 auto;
+}
+.integral-info div p:first-child {
+	line-height: 1.5rem;
+	border-bottom: 1px solid #c7c8c9;
+	text-indent: 1rem;
+	position: relative;
+}
+.red-round, .blue-round {
+	position: absolute;
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 50%;
+	top: 0.35rem;
+	left: 50%;
+	margin-left: -2.7rem;
+}
+.red-round {
+	background-color: #ff5722;
+}
+.blue-round {
+	background-color: #03a9f4;
+}
+.integral-info div p:last-child {
+	line-height: 2rem;
+	font-size: 1.3rem;
+	color: #e65a3b;
+}
+
+/* exchange */
+.exchange {
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	padding: 0.5rem 0;
+}
+.exchange a {
+	display: block;
+	font-size: 1.1rem;
+	margin: 5px auto;
+	width: 50%;
+	line-height: 2.5rem;
+	text-align: center;
+	color: #fff;
+	background-color: #ffa726;
+	border-radius: 5px;
+}
+
+/* integral-change */
+.integral-change {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding: 5px 0;
+}
+.integral-change p:first-child span, .integral-change p:nth-child(2) {
+	color: #e65a3b;
+}
+.integral-change p:first-child {
+	float: left;
+	text-indent: 3px;
+	width: 78%;
+	line-height: 2rem;
+	font-size: 0.95rem;
+}
+.integral-change p:nth-child(2) {
+	width: 22%;
+	line-height: 2rem;
+	font-size: 1.2rem;
+	text-align: center;
+	float: right;
+}
+.integral-change p:last-child {
+	font-size: 0.95rem;
+	text-align: center;
+	line-height: 1.8rem;
+}
+
+/* bottom */
+.bottom-bar {
+	width: 100%;
+	border-top: 1px solid #a5a5a5;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	z-index: 111;
+}
+.bottom-bar a {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.1rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.bottom-bar a:first-child {
+	border-right: 1px solid #a5a5a5;
+	background: url('../images/part-time.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}
+.bottom-bar a:last-child {
+	background: url('../images/myself.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}

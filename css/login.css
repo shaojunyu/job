@@ -1,0 +1,95 @@
+body {
+	background-color: #fff;
+}
+.logo {
+	width: 100%;
+	text-align: center;
+	margin-top: 4.5rem;
+	font-size: 1rem;
+}
+.logo img {
+	width: 40%;
+}
+form {
+	width: 67%;
+	margin: 1.8rem auto;
+}
+form input {
+	width: 100%;
+	font-size: 1.15rem;
+	line-height: 2.5rem;
+	border-radius: 5px;
+	border: 1px solid #9b9b9b;
+	text-indent: 2rem;
+	background-color: #fff;
+}
+.next-by-passwd, .next-by-codes {
+	display: block;
+	text-align: center;
+	background-color: #ff7043;
+	color: #fff;
+	margin: 18px 0;
+	width: 100%;
+	font-size: 1.15rem;
+	line-height: 2.5rem;
+	border-radius: 5px;
+	border: 1px solid #ff7043;
+}
+.next-by-codes {
+	display: none;
+}
+form a:active, form a:hover {
+	color: #fff;
+}
+.password-box {
+	margin-top: 0.7rem;
+}
+.codes-box {
+	display: none;
+	margin-top: 0.7rem;
+}
+.codes {
+	width: 51%;
+	text-indent: 3px;
+	float: left;
+}
+.get {
+	display: inline-block;
+	width: 46%;
+	background-color: #26a69a;
+	border: 1px solid #9b9b9b;
+	line-height: 2.5rem;
+	border-radius: 5px;
+	float: right;
+	text-align: center;
+	color: #fff;
+	font-size: 0.9rem;
+	margin-right: -2px;
+}
+.choose-box {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+.login-codes, .login-passwd {
+	display: inline-block;
+	padding: 6px 5px;
+	font-size: 1.05rem;
+	border-bottom: 1px solid #000;
+}
+.login-passwd {
+	display: none;
+}
+.phone {
+	background: #fff url('../images/phone.png') no-repeat 5px center;
+	background-size: 1.25rem;
+}
+.password {
+	background: #fff url('../images/psw.png') no-repeat 5px center;
+	background-size: 1.25rem;
+}
+@media screen and (max-width: 320px) {
+	form {
+		width: 80%;
+	}
+}

@@ -1,0 +1,80 @@
+body {
+	background-color: #fff;
+}
+/* content */
+.content {
+	width: 90%;
+	margin: 4rem auto;
+}
+.content p {
+	padding: 1rem 0;
+	width: 100%;
+}
+p span {
+	line-height: 1.6rem;
+}
+p span:first-child {
+	width: 35%;
+	float: left;
+}
+p span:last-child {
+	width: 65%;
+	float: right;
+}
+
+
+/* bottom */
+.bottom-bar {
+	width: 100%;
+	border-top: 1px solid #a5a5a5;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	z-index: 111;
+}
+.bottom-bar a {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.1rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.bottom-bar a:first-child {
+	border-right: 1px solid #a5a5a5;
+	background: url('../images/release.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}
+.bottom-bar a:last-child {
+	background: url('../images/myself.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}
+
+
+@media screen and (min-width: 320px) {
+	p span:first-child {
+		width: 35%;
+	}
+	p span:last-child {
+		width: 65%;
+	}
+}
+@media screen and (min-width: 375px) {
+	p span:first-child {
+		width: 32%;
+	}
+	p span:last-child {
+		width: 68%;
+	}
+}
+@media screen and (min-width: 410px) {
+	p span:first-child {
+		width: 30%;
+	}
+	p span:last-child {
+		width: 70%;
+	}
+}

@@ -1,0 +1,95 @@
+body {
+	background-color: #fff;
+}
+.content {
+	width: 100%;
+	min-height: 100%;
+	min-height:	90vh;
+}
+.logo {
+	width: 100%;
+	text-align: center;
+	padding-top: 4.5rem;
+	font-size: 1rem;
+}
+.logo img {
+	width: 40%;
+}
+form {
+	width: 67%;
+	margin: 1.8rem auto;
+	padding-bottom: 2rem;
+}
+form input {
+	width: 100%;
+	font-size: 1.15rem;
+	line-height: 2.5rem;
+	border-radius: 5px;
+	border: 1px solid #9b9b9b;
+	text-indent: 2rem;
+	background-color: #fff;
+}
+.next {
+	display: block;
+	text-align: center;
+	background-color: #ff7043;
+	color: #fff;
+	margin: 18px 0;
+	width: 100%;
+	font-size: 1.15rem;
+	line-height: 2.5rem;
+	border-radius: 5px;
+	border: 1px solid #ff7043;
+}
+form a:active, form a:hover {
+	color: #fff;
+}
+.cooperation {
+	display: block;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 1.15rem;
+	line-height: 2.5rem;
+	text-align: center;
+	background-color: #c3e3f7;
+	color: #000;
+	border: 1px solid #e8e8e8;
+}
+.cooperation:active, .cooperation:hover {
+	color: #000;
+}
+.codes-box {
+	margin-top: 0.7rem;
+}
+.codes {
+	width: 51%;
+	text-indent: 3px;
+	float: left;
+}
+.get {
+	display: inline-block;
+	width: 46%;
+	background-color: #26a69a;
+	border: 1px solid #9b9b9b;
+	line-height: 2.5rem;
+	border-radius: 5px;
+	float: right;
+	text-align: center;
+	color: #fff;
+	font-size: 0.9rem;
+	margin-right: -2px;
+}
+.phone {
+	background: #fff url('../images/phone.png') no-repeat 5px center;
+	background-size: 1.25rem;
+}
+@media screen and (max-width: 320px) {
+	form {
+		width: 80%;
+	}
+}
+footer {
+	width: 100%;
+	text-align: center;
+	font-size: 1rem;
+}

@@ -1,0 +1,86 @@
+body {
+	background-color: #fff;
+}
+.intro {
+	text-align: center;
+	font-size: 1.3rem;
+	margin-top: 3rem;
+}
+.ordinary, .skill {
+	width: 90%;
+	margin: 2.5rem auto;
+}
+.ordinary p, .skill p {
+	border-bottom: 1px solid #ccc;
+	font-size: 1.05rem;
+	line-height: 2rem;
+}
+.ordinary ul , .skill ul {
+	margin-top: 1rem;
+}
+.ordinary li, .skill li {
+	float: left;
+	width: 33.3%;
+	text-align: center;
+	margin: 0.6rem 0;
+}
+.ordinary a, .skill a {
+	display: inline-block;
+	width: 80%;
+	line-height: 1.8rem;
+	font-size: 1.05rem;
+	background-color: #fff;
+	border: 1px solid #4c4c4c;
+	border-radius: 5px;
+}
+a.click {
+	background-color: #ff6091;
+	color: #fff;
+	border-color: #ff168a;
+}
+.next {
+	display: block;
+	text-align: center;
+	background-color: #ff7043;
+	color: #fff;
+	margin-left: 10%;
+	margin-bottom: 3.8rem;
+	width: 80%;
+	font-size: 1.15rem;
+	line-height: 2.5rem;
+	border-radius: 5px;
+	border: 1px solid #ff7043;
+}
+.next:active, .next:hover {
+	color: #fff;
+}
+
+/* bottom */
+.bottom-bar {
+	width: 100%;
+	border-top: 1px solid #a5a5a5;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	z-index: 111;
+}
+.bottom-bar a {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.1rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.bottom-bar a:first-child {
+	border-right: 1px solid #a5a5a5;
+	background: url('../images/release.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}
+.bottom-bar a:last-child {
+	background: url('../images/myself.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}

@@ -1,0 +1,91 @@
+body {
+	background-color: #fff;
+}
+.logo {
+	width: 100%;
+	text-align: center;
+	margin-top: 4.5rem;
+	font-size: 1rem;
+}
+.logo img {
+	width: 40%;
+}
+form {
+	width: 67%;
+	margin: 1.8rem auto;
+}
+form input {
+	width: 100%;
+	font-size: 1.15rem;
+	line-height: 2.5rem;
+	border-radius: 5px;
+	border: 1px solid #9b9b9b;
+	text-indent: 2rem;
+	background-color: #fff;
+}
+.password {
+	margin-top: 0.7rem;
+	background: #fff url('../images/psw.png') no-repeat 5px center;
+	background-size: 1.25rem;
+}
+.next {
+	display: block;
+	text-align: center;
+	background-color: #ff7043;
+	color: #fff;
+	margin: 18px 0;
+	width: 100%;
+	font-size: 1.15rem;
+	line-height: 2.5rem;
+	border-radius: 5px;
+	border: 1px solid #ff7043;
+}
+.next:active, .next:hover {
+	color: #fff;
+}
+.phone {
+	background: #fff url('../images/phone.png') no-repeat 5px center;
+	background-size: 1.25rem;
+}
+.school-box {
+	margin-top: 0.7rem;
+	position: relative;
+	width: 100%;
+}
+.school-box a {
+	display: block;
+	width: 100%;
+	text-indent: 5px;
+	font-size: 1.1rem;
+	line-height: 2.2rem;
+	background-color: #fff;
+}
+.school-box .choose {
+	line-height: 2.5rem;
+	border: 1px solid #9b9b9b;
+	border-radius: 5px;
+}
+.school {
+	width: 100%;
+	border: 1px solid #9b9b9b;
+	border-radius: 5px;
+	position: absolute;
+	top: 2.5rem;
+	margin-top: 1px;
+	background-color: #fff;
+	display: none;
+	z-index: 11;
+}
+.icon {
+	position: absolute;
+	right: 0.6rem;
+	top: 0.85rem;
+	border-left: 0.4rem solid transparent;
+	border-right: 0.4rem solid transparent;
+	border-top: 0.8rem solid #474747;
+}
+@media screen and (max-width: 320px) {
+	form {
+		width: 80%;
+	}
+}

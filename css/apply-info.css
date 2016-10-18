@@ -1,0 +1,97 @@
+body {
+	background-color: #fff;
+}
+/* content */
+.content {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 5rem;
+}
+
+/* title */
+.title {
+	width: 100%;
+	padding-top: 2rem;
+}
+.title p {
+	float: left;
+	width: 50%;
+	text-align: center;
+	line-height: 2.2rem;
+}
+.title span {
+	color: #e52329;
+	font-weight: 600;
+}
+.title a {
+	display: inline-block;
+	width: 70%;
+	background-color: #26a69a;
+	border-radius: 5px;
+	color: #fff;
+}
+.prompt {
+	color: #abadb4;
+	text-align: center;
+	font-size: 0.95rem;
+	line-height: 1.8rem;
+}
+
+/* participation-box */
+.participation-box {
+	width: 100%;
+	margin-top: 0.5rem;
+	border-top: 1px solid #abadb4;
+	border-collapse:collapse;
+}
+.participation-box th, .participation-box td {
+	line-height: 2rem;
+	text-align: center;
+	word-wrap: break-word; 
+	word-break: normal;
+	border-bottom: 1px solid #abadb4;
+}
+.participation-box tr td:nth-child(1), .participation-box tr th:nth-child(1) {
+	width: 20%;
+	font-size: 0.95rem;
+	border-right: 1px solid #abadb4;
+}
+.participation-box tr td:nth-child(2), .participation-box tr th:nth-child(2) {
+	width: 30%;
+	font-size: 0.95rem;
+	border-right: 1px solid #abadb4;
+}
+.participation-box tr td:nth-child(3), .participation-box tr th:nth-child(3) {
+	width: 30%;
+	font-size: 0.95rem;
+	border-right: 1px solid #abadb4;
+}
+.participation-box tr td:nth-child(4), .participation-box tr th:nth-child(4) {
+	width: 20%;
+	font-size: 0.95rem;
+}
+
+/* return */
+.return-box {
+	position: fixed;
+	width: 100%;
+	height: 4rem;
+	bottom: 0;
+	left: 0;
+	z-index: 11;
+	background-color: #fff;
+}
+.return {
+	display: block;
+	width: 50%;
+	margin: 0.8rem auto;
+	line-height: 2.5rem;
+	font-size: 1.2rem;
+	color: #fff;
+	background-color: #29b6f6;
+	text-align: center;
+	border-radius: 5px;
+}
+.return:hover {
+	color: #fff;
+}

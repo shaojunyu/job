@@ -1,0 +1,135 @@
+body {
+	background-color: #fff;
+}
+/* content */
+.content {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 4rem;
+}
+.title {
+	font-size: 1.3rem;
+	text-align: center;
+	line-height: 3rem;
+	margin-top: 1rem;
+}
+.money-info {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding: 0.6rem 0;
+}
+.money-info div {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.money-info p {
+	width: 80%;
+	margin: 0 auto;
+}
+.money-info div p:first-child {
+	line-height: 1.5rem;
+	border-bottom: 1px solid #c7c8c9;
+	text-indent: 1rem;
+	position: relative;
+}
+.red-round, .blue-round {
+	position: absolute;
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 50%;
+	top: 0.35rem;
+	left: 50%;
+	margin-left: -2.7rem;
+}
+.red-round {
+	background-color: #ff5722;
+}
+.blue-round {
+	background-color: #03a9f4;
+}
+.money-info div p:last-child {
+	line-height: 2rem;
+	font-size: 1.3rem;
+	color: #e65a3b;
+}
+
+/* get-money */
+.get-money {
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	padding: 0.5rem 0;
+}
+.get-money a {
+	display: block;
+	font-size: 1.1rem;
+	margin: 5px auto;
+	width: 50%;
+	line-height: 2.5rem;
+	text-align: center;
+	color: #fff;
+	background-color: #ffa726;
+	border-radius: 5px;
+}
+
+/* pay & withdraws-cash */
+.pay, .withdraws-cash {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding: 5px 0;
+}
+.pay div:first-child span, .pay div:last-child p:first-child {
+	color: #e65a3b;
+}
+.withdraws-cash div:first-child span, .withdraws-cash div:last-child p:first-child {
+	color: #03a9f4;
+}
+.pay div, .withdraws-cash div {
+	float: left;
+	text-indent: 3px;
+}
+.pay div:first-child, .withdraws-cash div:first-child {
+	width: 78%;
+	line-height: 2rem;
+	font-size: 0.95rem;
+}
+.pay div:last-child, .withdraws-cash div:last-child {
+	width: 22%;
+	line-height: 2rem;
+	font-size: 0.95rem;
+	text-align: center;
+}
+.pay div:last-child p:first-child, .withdraws-cash div:last-child p:first-child {
+	font-size: 1.2rem;
+}
+
+/* bottom */
+.bottom-bar {
+	width: 100%;
+	border-top: 1px solid #a5a5a5;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	z-index: 111;
+}
+.bottom-bar a {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.1rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.bottom-bar a:first-child {
+	border-right: 1px solid #a5a5a5;
+	background: url('../images/part-time.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}
+.bottom-bar a:last-child {
+	background: url('../images/myself.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}

@@ -1,0 +1,65 @@
+p {
+	text-align: center;
+}
+.user {
+	margin-top: 3rem;
+}
+
+/* content */
+.content {
+	width: 100%;
+	margin-top: 3rem;
+}
+.job {
+	color: #ed1fed;
+	font-size: 1.35rem;
+	line-height: 2rem;
+}
+.people {
+	line-height: 3rem;
+}
+.content a {
+	display: block;
+	width: 55%;
+	font-size: 1.1rem;
+	line-height: 2.5rem;
+	text-align: center;
+	border-radius: 5px;
+	margin: 0.2rem auto;
+	background-color: #ff7043;
+	color: #fff;
+}
+.content span {
+	color: #ff7043;
+}
+.content div {
+	position: relative;
+	float: left;
+	left: 50%;
+	margin-top: 1rem;
+}
+.protection {
+	position: relative;
+	left: -50%;
+	line-height: 1rem;
+	font-weight: 600;
+}
+.protection input, .protection span {
+	float: left;
+}
+.protection input {
+	width: 1rem;
+	height: 1rem;
+}
+.protection span {
+	margin-left: 5px;
+}
+
+/* remarks */
+.remarks {
+	width: 80%;
+	margin: 0 auto;
+	font-size: 0.9rem;
+	padding-top: 5rem;
+	text-align: left;
+}

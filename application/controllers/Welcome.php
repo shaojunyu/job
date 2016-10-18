@@ -20,6 +20,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		//$this->load->view('welcome_message');
+		//require_once APPPATH.'third_party/bmob/lib/BmobSms.class.php';
+		//$this->load->view('index_view');
+		header('Location:./user/index');
+
 	}
 }

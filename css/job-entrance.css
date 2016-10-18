@@ -1,0 +1,60 @@
+body {
+	background-color: #fff;
+}
+
+/* prompt-box */
+.prompt-box {
+	width: 80%;
+	font-size: 1.3rem;
+	height: 5rem;
+	line-height: 5rem;
+	background-color: #f69743;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 1px;
+	position: fixed;
+	top: 3.5rem;
+	left: 10%;
+	z-index: 999;
+	display: none;
+}
+
+.myself, .official, .questionnaire {
+	display: block;
+	width: 100%;
+	line-height: 3.8rem;
+	font-size: 1rem;
+	border-bottom: 1px solid #000;
+	text-indent: 1rem;
+}
+.myself span, .official span, .questionnaire span {
+	font-size: 1.2rem;
+}
+.bottom-bar {
+	width: 100%;
+	border-top: 1px solid #a5a5a5;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	z-index: 111;
+}
+.bottom-bar a {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.1rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.bottom-bar a:first-child {
+	border-right: 1px solid #a5a5a5;
+	background: url('../images/part-time.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}
+.bottom-bar a:last-child {
+	background: url('../images/myself.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}

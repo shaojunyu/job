@@ -1,0 +1,53 @@
+body {
+	background-color: #fff;
+}
+
+.withdraws-cash-box, .submit-box, .success-box {
+	width: 90%;
+	height: 12rem;
+	line-height: 3rem;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	margin-top: -6rem;
+	border: 1px solid #939393;
+	background-color: #fff;
+}
+.withdraws-cash-box a, .submit-box a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	background-color: #ff7043;
+	width: 50%;
+	margin: 0 auto;
+	line-height: 2.2rem;
+	margin-top: 0.4rem;
+	border-radius: 5px;
+}
+.withdraws-cash-box p:nth-child(2), .withdraws-cash-box p:nth-child(3) {
+	width: 90%;
+	text-align: right;
+	margin: 0 auto;
+}
+.withdraws-cash-box input, .submit-box input {
+	width: 70%;
+	height: 2rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 1.1rem;
+	text-indent: 3px;
+}
+.withdraws-cash-box p:first-child, .submit-box p:first-child, .success-box p:first-child {
+	font-size: 1.25rem;
+	text-align: center;
+}
+.submit-box, .success-box {
+	display: none;
+}
+.success-box {
+	background-color: #ff7063;
+	color: #fff;
+	line-height: 3rem;
+	text-align: center;
+}

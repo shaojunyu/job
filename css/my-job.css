@@ -1,0 +1,68 @@
+body {
+	background-color: #fff;
+}
+header {
+	line-height: 3rem;
+	text-align: center;
+	font-size: 1.3rem;
+	border-bottom: 1px solid #000;
+}
+.content {
+	margin-bottom: 3.8rem;
+}
+.job {
+	margin: 10px 0;
+	border-top: 1px solid #bcbcbc;
+	border-bottom: 1px solid #bcbcbc;
+}
+.title {
+	width: 90%;
+	text-align: center;
+	font-size: 1.3rem;
+	line-height: 2.5rem;
+	color: #ff5722;
+	border-bottom: 1px solid #bcbcbc;
+	margin: 0 auto;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+}
+.detailed {
+	font-size: 0.9rem;
+	text-align: center;
+	padding: 0.3rem 0;
+}
+.detailed a {
+	display: inline-block;
+	padding: 8px 10px;
+	color: red;
+}
+.bottom-bar {
+	width: 100%;
+	border-top: 1px solid #a5a5a5;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	z-index: 111;
+}
+.bottom-bar a {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.1rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.bottom-bar a:first-child {
+	border-right: 1px solid #a5a5a5;
+	background: url('../images/part-time.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}
+.bottom-bar a:last-child {
+	background: url('../images/myself.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}

@@ -1,0 +1,109 @@
+body {
+	background-color: #fff;
+}
+/* content */
+.content {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 5rem;
+}
+
+/* title */
+.title {
+	width: 100%;
+	padding: 1rem 0;
+}
+.title span {
+	float: left;
+	text-align: center;
+	line-height: 2.2rem;
+}
+.title span:nth-child(1) {
+	font-size: 1.25rem;
+	width: 29%;
+}
+.title span:nth-child(2) {
+	width: 43%;
+}
+.title span:nth-child(3) {
+	width: 28%;
+}
+.title span:nth-child(2), .title span:nth-child(3) {
+	font-size: 0.9rem;
+}
+
+/* part-time-job-item */
+.part-time-job-item {
+	margin-bottom: 1rem;
+	border-top: 1px solid #91867b;
+	border-bottom: 1px solid #91867b;
+}
+.part-time-job-item p {
+	text-align: center;
+}
+.job {
+	color: #ff7043;
+	line-height: 2.2rem;
+	font-size: 1.2rem;
+	width: 92%;
+	margin: 0.5rem auto;
+	border-bottom: 1px solid #91867b;
+}
+.detailed-info {
+	line-height: 2rem;
+}
+.detailed-info a {
+	display: inline-block;
+	height: 2rem;
+	padding: 0 5px;
+}
+.create-link {
+	width: 85%;
+	background-color: #ff7043;
+	color: #fff;
+}
+.create-link:hover {
+	color: #fff;
+}
+.view {
+	width: 70%;
+	border: 1px solid #91867b;
+}
+.create-link, .view {
+	display: block;
+	margin: 0.5rem auto;
+	line-height: 2rem;
+	border-radius: 5px;
+	text-align: center;
+}
+
+/* return */
+.return-box {
+	position: fixed;
+	width: 100%;
+	height: 4rem;
+	bottom: 0;
+	left: 0;
+	z-index: 11;
+	background-color: #fff;
+}
+.return {
+	display: block;
+	width: 50%;
+	margin: 0.8rem auto;
+	line-height: 2.5rem;
+	font-size: 1.2rem;
+	color: #fff;
+	background-color: #29b6f6;
+	text-align: center;
+	border-radius: 5px;
+}
+.return:hover {
+	color: #fff;
+}
+
+@media screen and (min-width: 320px) {
+	.title span:nth-child(3) {
+		letter-spacing: -1px;
+	}
+}

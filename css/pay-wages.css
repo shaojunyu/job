@@ -1,0 +1,108 @@
+body {
+	background-color: #fff;
+}
+/* container */
+.container {
+	width: 100%;
+	margin:1rem auto;
+	padding-bottom: 3rem;
+}
+
+/* participation-box */
+.participation-box {
+	width: 100%;
+	margin-top: 0.5rem;
+	border-top: 1px solid #abadb4;
+	border-collapse:collapse;
+}
+.participation-box th, .participation-box td {
+	line-height: 2.2rem;
+	text-align: center;
+	word-wrap: break-word; 
+	word-break: normal;
+	border-bottom: 1px solid #abadb4;
+}
+.participation-box tr td:nth-child(1), .participation-box tr th:nth-child(1) {
+	width: 20%;
+	font-size: 0.95rem;
+	border-right: 1px solid #abadb4;
+}
+.participation-box tr td:nth-child(2), .participation-box tr th:nth-child(2) {
+	width: 30%;
+	font-size: 0.95rem;
+	border-right: 1px solid #abadb4;
+}
+.participation-box tr td:nth-child(3), .participation-box tr th:nth-child(3) {
+	width: 15%;
+	font-size: 0.95rem;
+	border-right: 1px solid #abadb4;
+}
+.participation-box tr td:nth-child(4), .participation-box tr th:nth-child(4) {
+	width: 35%;
+	font-size: 0.95rem;
+}
+/* input */
+.participation-box input {
+	border: 1px solid #bbb;
+	line-height: 1.6rem;
+	border-radius: 5px;
+	text-indent: 2px;
+}
+.participation-box tr td:nth-child(3) input {
+	width: 87%;
+}
+.participation-box tr td:nth-child(4) input {
+	width: 50%;
+}
+
+/* all-wages */
+.all-wages {
+	text-align: center;
+	line-height: 3rem;
+}
+
+/* pay */
+.pay {
+	display: block;
+	text-align: center;
+	width: 60%;
+	color: #fff;
+	font-size: 1.2rem;
+	line-height: 2.5rem;
+	margin: 0.5rem auto;
+	background-color: #ff7043;
+	border-radius: 5px;
+}
+.pay:hover {
+	color: #fff;
+}
+
+/* bottom */
+.bottom-bar {
+	width: 100%;
+	border-top: 1px solid #a5a5a5;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	z-index: 111;
+}
+.bottom-bar a {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.1rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.bottom-bar a:first-child {
+	border-right: 1px solid #a5a5a5;
+	background: url('../images/release.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}
+.bottom-bar a:last-child {
+	background: url('../images/myself.png') no-repeat 15% center;
+	background-size: 1.2rem;
+}
