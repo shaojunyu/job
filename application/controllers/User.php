@@ -43,27 +43,30 @@ class User extends CI_Controller{
     }
 
     public function complete_info($step = 0){
-        if ($step == 0){
-            $this->load->view('complete_entrance_view');
-        }
-        if ($step == 1){
-            $this->load->view('complete_entrance_view');
-        }
-        if ($step == 2){
-            $this->load->view('complete_entrance_view');
-        }
-        if ($step == 3){
-            $this->load->view('complete_entrance_view');
-        }else{
-        }
+        $this->load->view('complete_entrance_view');
+//        if ($step == 0){
+//            $this->load->view('complete_entrance_view');
+//        }
+//        if ($step == 1){
+//            $this->load->view('complete_entrance_view');
+//        }
+//        if ($step == 2){
+//            $this->load->view('complete_entrance_view');
+//        }
+//        if ($step == 3){
+//            $this->load->view('complete_entrance_view');
+//        }else{
+//        }
     }
 
     public function myself(){
         $session_data = $this->session->userdata();
         if (empty($session_data['tag1']) or empty($session_data['tag2'])){
-            header('Location:./complete_info/1');
+            header('Location:./complete_info');
         }else if (empty($session_data['name']) or empty($session_data['sex']) or empty($session_data['QQ'])){
-
+            header('Location:./complete_info');
+        }else{
+            $this->load->view('myself_view');
         }
 //        ?\$this->load->view('myself_view');
     }
