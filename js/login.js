@@ -75,14 +75,14 @@ $(function () {
 	        data: JSON.stringify(data),
 	        success: function(data) {
 	        	if(data.success) {
-	        		window.location.href = "";
+	        		window.location.href = "../user/myself";
 	        	}
 				else {
-	        		alert(data.msg);
+	        		showMsg("用户名或密码错误");
 	        	}
 	        },
 		    error: function(XMLHttpRequest, textStatus, errorThrown){  
-		        alert("请求失败，请刷新重试"); 
+		        showMsg("请求失败，请刷新重试"); 
 		    }
 	    });
 	});
@@ -235,4 +235,19 @@ function showError(inputElem, err) {
 function hideError(inputElem) {
 	inputElem.css("color", "#000");
 	inputElem.val("");
+}
+
+//消息显示框显示
+function showMsg(msg) {
+	$(".prompt-box").html(msg);
+	$(".prompt-box").show();
+	setTimeout(function () {
+		hideMsg();
+	}, 3000);
+}
+
+//消息显示框隐藏
+function hideMsg() {
+	$(".prompt-box").html("");
+	$(".prompt-box").hide();
 }

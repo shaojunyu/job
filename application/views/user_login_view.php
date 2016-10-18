@@ -34,6 +34,9 @@
     <a href="javascript:;" class="login-passwd">使用密码登录</a>
 </div>
 
+<!-- 弹出消息 -->
+<div class="prompt-box"></div>
+
 <script type="text/javascript" src="<?php echo base_url();?>js/zepto.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>js/touch.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>js/login.js"></script>
