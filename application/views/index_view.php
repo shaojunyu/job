@@ -13,9 +13,9 @@
     <p>四年兼职登录</p>
 </div>
 
-<form>
-    <input type="tel" class="phone" placeholder="请输入手机号">
-    <a href="javascript:;" class="next">下一步</a>
+<form method="POST" action="./login">
+    <input type="tel" class="phone" placeholder="请输入手机号" name="cellphone">
+    <input type="submit" class="next" value="下一步">
 </form>
 
 <a href="javascript:;" class="business">商家入口</a>
