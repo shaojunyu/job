@@ -43,13 +43,13 @@ class User extends CI_Controller{
     }
 
     public function complete_info($step = 0){
-        $this->load->view('complete_entrance_view');
-//        if ($step == 0){
-//            $this->load->view('complete_entrance_view');
-//        }
-//        if ($step == 1){
-//            $this->load->view('complete_entrance_view');
-//        }
+//        $this->load->view('complete_entrance_view');
+        if ($step == 0){
+            $this->load->view('complete_entrance_view');
+        }
+        if ($step == 1){
+            $this->load->view('complete_view');
+        }
 //        if ($step == 2){
 //            $this->load->view('complete_entrance_view');
 //        }
