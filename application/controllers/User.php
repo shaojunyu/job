@@ -42,12 +42,25 @@ class User extends CI_Controller{
         }
     }
 
-    public function complete(){
-        
+    public function complete_info($step = 0){
+        if ($step == 0){
+            $this->load->view('complete_entrance_view');
+        }
+        if ($step == 1){
+            $this->load->view('complete_entrance_view');
+        }
+        if ($step == 2){
+            $this->load->view('complete_entrance_view');
+        }
+        if ($step == 3){
+            $this->load->view('complete_entrance_view');
+        }else{
+        }
     }
 
     public function myself(){
-        var_dump($this->session->userdata());
+        $session_data = $this->session->userdata();
+//        if (empty($session_data['']))
 //        ?\$this->load->view('myself_view');
     }
 }
