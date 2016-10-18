@@ -53,6 +53,12 @@ class User extends CI_Controller{
     }
 
     public function myself(){
+        if (empty($this->session->userdata('cellphone'))){
+            header('Location:/user/index');
+        }
+        $this->load->model('User_model');
+        $this->User_model->userInfo2session($this->session->userdata('cellphone'));
+
         $session_data = $this->session->userdata();
         if (empty($session_data['tag1']) and empty($session_data['tag2'])){
             header('Location:./complete_info');

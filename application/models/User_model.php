@@ -86,6 +86,10 @@ class User_model extends CI_Model{
         }
     }
 
+    public function update_session(){
+        
+    }
+
     /**
      * function logout 登出
      * @param
