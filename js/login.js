@@ -67,7 +67,6 @@ $(function () {
 			cellphone: $.trim($(".phone").val()).split("-").join(""),
 			password: $(".password").val()
 		};
-		console.log(data);
 		$.ajax({
 	        url: '../api/login',
 	        contentType: "application/json",
@@ -76,7 +75,7 @@ $(function () {
 	        data: JSON.stringify(data),
 	        success: function(data) {
 	        	if(data.success) {
-	        		console.log('success');
+	        		window.location.href = "";
 	        	}
 				else {
 	        		alert(data.msg);
