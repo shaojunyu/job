@@ -15,10 +15,10 @@
 				<p>暂未保障权益</p>
 			</div>
 			<div class="info">
-				<p class="name">华小科</p>
+				<p class="name"><?php echo $this->session->userdata('name');?></p>
 				<p>等级：4.5（满级5）</p>
-				<p>学校：华中科技大学</p>
-				<p>手机：13166668888</p>
+				<p>学校：<?php echo $this->session->userdata('school');?></p>
+				<p>手机：<?php echo $this->session->userdata('cellphone');?></p>
 				<a href="javascript:;" class="leader">领队管理入口</a>
 			</div>
 		</div>
