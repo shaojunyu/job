@@ -7,8 +7,12 @@
  */
 class User extends CI_Controller{
     public function index(){
-//        header('Location:/user/index');
-        $this->load->view('index_view');
+        if ( empty($this->session->userdata('cellphone')) ){
+            $this->load->view('index_view');
+        }else{
+            header('Location:'.base_url().'/user/myself');
+        }
+
     }
 
     public function login(){
@@ -25,7 +29,7 @@ class User extends CI_Controller{
                 echo $cellphone;
                 //echo $this->db->affected_rows();
 //                $this->load->view('signup1_view',array('cellphone'=>$cellphone));
-                header('Location:./signup1/'.$cellphone);
+                header('Location:'.base_url().'user/signup1/'.$cellphone);
             }
         }
     }
@@ -37,14 +41,24 @@ class User extends CI_Controller{
     public function signup2(){
         $cellphone = $this->input->post('cellphone');
         if (empty($cellphone)){
-            header('Location:./signup1/');
+            header('Location:'.base_url().'user/signup1/');
         }else{
             $this->load->view('signup2_view',array('cellphone'=>$cellphone));
         }
     }
 
     public function complete_info($step = 0){
-//        $this->load->view('complete_entrance_view');
+        if (empty($this->session->userdata('cellphone'))){
+            header('Location:'.base_url().'/user/index');
+        }
+        $this->load->model('User_model');
+        $this->User_model->userInfo2session($this->session->userdata('cellphone'));
+        $session_data = $this->session->userdata();
+//        var_dump($this->session->userdata());
+        if ( !empty($session_data['name']) and !empty($session_data['sex']) and !empty($session_data['QQ']) ){
+            header('Location:'.base_url().'/user/myself');
+        }
+
         if ($step == 0){
             $this->load->view('complete_entrance_view');
         }
@@ -55,16 +69,16 @@ class User extends CI_Controller{
 
     public function myself(){
         if (empty($this->session->userdata('cellphone'))){
-            header('Location:/user/index');
+            header('Location:'.base_url().'/user/index');
         }
         $this->load->model('User_model');
         $this->User_model->userInfo2session($this->session->userdata('cellphone'));
 
         $session_data = $this->session->userdata();
         if (empty($session_data['tag1']) and empty($session_data['tag2'])){
-            header('Location:./complete_info');
+            header('Location:'.base_url().'user/complete_info');
         }else if (empty($session_data['name']) or empty($session_data['sex']) or empty($session_data['QQ'])){
-            header('Location:./complete_info');
+            header('Location:'.base_url().'user/complete_info');
         }else{
             //获取积分
             $this->db->where('cellphone',$this->session->userdata('cellphone'));
@@ -73,10 +87,18 @@ class User extends CI_Controller{
 //            var_dump($res->result_array()[0]);
             $res = $res->result_array();
 //            var_dump($res);
-            $point = empty($res[0]['point'])?$res[0]['point']:0;
+            $point = empty($res[0]['point'])?0:$res[0]['point'];
             $this->load->view('myself_view',array(
                 'point'=>$point
             ));
         }
+    }
+
+    public function balance(){
+
+    }
+
+    public function point(){
+
     }
 }

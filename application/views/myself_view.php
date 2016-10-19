@@ -31,7 +31,7 @@
 			</a>
 			<a href="./points" class="points">
 				<p>当前积分</p>
-				<p>100分</p>
+				<p><?php echo $point;?>分</p>
 				<span>积分换礼，感谢你</span>
 			</a>
 		</div>
