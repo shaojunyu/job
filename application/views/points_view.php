@@ -31,6 +31,9 @@
 		</div>
 	</div>
 
+	<!-- 弹出消息 -->
+	<div class="prompt-box-points"></div>
+
 	<div class="bottom-bar">
 		<a href="javascript:;">我的兼职</a>
 		<a href="javascript:;">个人中心</a>
