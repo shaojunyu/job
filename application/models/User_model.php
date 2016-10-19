@@ -11,6 +11,9 @@ class User_model extends CI_Model{
         parent::__construct();
     }
 
+    public function is_logined($cellphone){
+
+    }
     /**
      * function login
      * @param
