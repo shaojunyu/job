@@ -66,7 +66,17 @@ class User extends CI_Controller{
         }else if (empty($session_data['name']) or empty($session_data['sex']) or empty($session_data['QQ'])){
             header('Location:./complete_info');
         }else{
-            $this->load->view('myself_view');
+            //获取积分
+            $this->db->where('cellphone',$this->session->userdata('cellphone'));
+            $this->db->select_sum('point');
+            $res = $this->db->get('job_point');
+//            var_dump($res->result_array()[0]);
+            $res = $res->result_array();
+//            var_dump($res);
+            $point = empty($res[0]['point'])?$res[0]['point']:0;
+            $this->load->view('myself_view',array(
+                'point'=>$point
+            ));
         }
     }
 }
