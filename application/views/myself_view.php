@@ -23,13 +23,13 @@
 			</div>
 		</div>
 
-		<div class="money-and-integral clearfix">
+		<div class="money-and-points clearfix">
 			<a href="javascript:;" class="money">
 				<p>钱包余额</p>
 				<p>359元</p>
 				<span>点击查看明细、工资及提现</span>
 			</a>
-			<a href="javascript:;" class="integral">
+			<a href="javascript:;" class="points">
 				<p>当前积分</p>
 				<p>100分</p>
 				<span>积分换礼，感谢你</span>
