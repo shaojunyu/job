@@ -14,7 +14,7 @@
 	</div>
 
 	<form>
-		<input type="tel" class="phone" placeholder="请输入手机号" value="<?php echo $cellphone;?>">
+		<input type="tel" class="phone" placeholder="请输入手机号" readonly="readonly" value="<?php echo $cellphone;?>">
 		<div class="school-box">
 			<a href="javascript:;" class="choose">请选择您所在的学校</a>
 			<span class="icon"></span>
@@ -26,6 +26,9 @@
 		<input type="password" class="password" placeholder="设置您的密码(至少6位)">
 		<a href="javascript:;" class="next">下一步</a>
 	</form>
+
+	<!-- 弹出消息 -->
+	<div class="prompt-box"></div>
 
 	<script type="text/javascript" src="<?php echo base_url();?>js/zepto.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/touch.js"></script>

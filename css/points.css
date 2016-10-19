@@ -13,21 +13,21 @@ body {
 	line-height: 3rem;
 	margin-top: 1rem;
 }
-.integral-info {
+.points-info {
 	width: 100%;
 	border-bottom: 1px solid #ccc;
 	padding: 0.6rem 0;
 }
-.integral-info div {
+.points-info div {
 	width: 50%;
 	float: left;
 	text-align: center;
 }
-.integral-info p {
+.points-info p {
 	width: 80%;
 	margin: 0 auto;
 }
-.integral-info div p:first-child {
+.points-info div p:first-child {
 	line-height: 1.5rem;
 	border-bottom: 1px solid #c7c8c9;
 	text-indent: 1rem;
@@ -48,7 +48,7 @@ body {
 .blue-round {
 	background-color: #03a9f4;
 }
-.integral-info div p:last-child {
+.points-info div p:last-child {
 	line-height: 2rem;
 	font-size: 1.3rem;
 	color: #e65a3b;
@@ -73,30 +73,30 @@ body {
 	border-radius: 5px;
 }
 
-/* integral-change */
-.integral-change {
+/* points-change */
+.points-change {
 	width: 100%;
 	border-bottom: 1px solid #ccc;
 	padding: 5px 0;
 }
-.integral-change p:first-child span, .integral-change p:nth-child(2) {
+.points-change p:first-child span, .points-change p:nth-child(2) {
 	color: #e65a3b;
 }
-.integral-change p:first-child {
+.points-change p:first-child {
 	float: left;
 	text-indent: 3px;
 	width: 78%;
 	line-height: 2rem;
 	font-size: 0.95rem;
 }
-.integral-change p:nth-child(2) {
+.points-change p:nth-child(2) {
 	width: 22%;
 	line-height: 2rem;
 	font-size: 1.2rem;
 	text-align: center;
 	float: right;
 }
-.integral-change p:last-child {
+.points-change p:last-child {
 	font-size: 0.95rem;
 	text-align: center;
 	line-height: 1.8rem;

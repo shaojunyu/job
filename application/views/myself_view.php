@@ -19,17 +19,17 @@
 				<p>等级：4.5（满级5）</p>
 				<p>学校：<?php echo $this->session->userdata('school');?></p>
 				<p>手机：<?php echo $this->session->userdata('cellphone');?></p>
-				<a href="javascript:;" class="leader">领队管理入口</a>
+				<a href="./leader_management" class="leader">领队管理入口</a>
 			</div>
 		</div>
 
-		<div class="money-and-integral clearfix">
-			<a href="javascript:;" class="money">
+		<div class="money-and-points clearfix">
+			<a href="./balance" class="money">
 				<p>钱包余额</p>
 				<p>359元</p>
 				<span>点击查看明细、工资及提现</span>
 			</a>
-			<a href="javascript:;" class="integral">
+			<a href="./points" class="points">
 				<p>当前积分</p>
 				<p>100分</p>
 				<span>积分换礼，感谢你</span>

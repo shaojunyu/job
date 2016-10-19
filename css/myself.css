@@ -44,13 +44,13 @@ body {
 	line-height: 2rem;
 }
 
-/* money-and-integral */
-.money-and-integral {
+/* money-and-points */
+.money-and-points {
 	width: 100%;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 }
-.money-and-integral a {
+.money-and-points a {
 	display: block;
 	width: 50%;
 	float: left;
@@ -64,16 +64,16 @@ body {
 .money {
 	border-right: 1px solid #ccc;
 }
-.money p:first-child, .integral p:first-child {
+.money p:first-child, .points p:first-child {
 	font-size: 1.1rem;
 	line-height: 1.5rem;
 }
-.money p:nth-child(2), .integral p:nth-child(2) {
+.money p:nth-child(2), .points p:nth-child(2) {
 	font-size: 1.3rem;
 	color: #ff7043;
 	line-height: 2rem;
 }
-.money span, .integral span {
+.money span, .points span {
 	display: inline-block;
 	width: 90%;
 	font-size: 0.8rem;

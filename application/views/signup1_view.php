@@ -14,7 +14,7 @@
 	</div>
 
 	<form method="POST" action="../signup2">
-		<input type="tel" class="phone" name="cellphone" placeholder="手机号" value="<?php if(empty($cellphone)){echo '';}else{echo $cellphone;} ?>">
+		<input type="tel" class="phone" name="cellphone" placeholder="手机号" readonly="readonly" value="<?php if(empty($cellphone)){echo '';}else{echo $cellphone;} ?>">
 
 		<div class="codes-box clearfix">
 			<input type="tel" class="codes" placeholder="输入验证码">
