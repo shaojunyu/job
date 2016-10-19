@@ -29,7 +29,7 @@
 				<p>359元</p>
 				<span>点击查看明细、工资及提现</span>
 			</a>
-			<a href="./points" class="points">
+			<a href="./point" class="points">
 				<p>当前积分</p>
 				<p><?php echo $point;?>分</p>
 				<span>积分换礼，感谢你</span>
