@@ -1,0 +1,5 @@
+$(function () {
+	$(".transfer").tap(function () {
+		
+	});
+});
