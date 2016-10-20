@@ -49,7 +49,7 @@
 
 	<div class="bottom-bar">
 		<a href="javascript:;">我的兼职</a>
-		<a href="javascript:;">个人中心</a>
+		<a href="<?php echo base_url('/user/myself');?>">个人中心</a>
 	</div>
 
 	<script type="text/javascript" src="<?php echo base_url();?>js/zepto.min.js"></script>
