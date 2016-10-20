@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<title>领队管理</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/reset.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/leader-management.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/leader.css">
 </head>
 <body>
 	<div class="content">
