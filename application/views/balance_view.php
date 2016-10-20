@@ -25,26 +25,41 @@
 			<p>每周五可以提现哦</p>
 		</div>
 
+		<?php
+		$total = 0;
+		$left = 0;
+		foreach ($trade_array as $trade){
+			$left += $trade['amount'];
+			if ($trade['amount'] > 0){
+				$total += $trade['amount'];
+		?>
+
 		<div class="pay clearfix">  <!-- 发工资 -->
 			<div>
-				<p>2016年8月19日 19:08 <span>&nbsp;&nbsp;&nbsp;发工资</span></p>
-				<p>四年生活销售兼职工资发放</p>
+				<p><?php echo $trade['createAt'];?><span>&nbsp;&nbsp;&nbsp;收入</span></p>
+				<p><?php echo $trade['remark'];?></p>
 			</div>
 			<div>
-				<p>356元</p>
+				<p><?php echo $trade['amount'];?>元</p>
 				<p>已完成</p>
 			</div>
 		</div>
+				<?php } if ($trade['amount'] < 0){?>
 		<div class="withdraws-cash clearfix">  <!-- 提现 -->
 			<div>
-				<p>2016年8月19日 19:08 <span>&nbsp;&nbsp;&nbsp;提现</span></p>
-				<p>提现至支付宝 131****8888</p>
+				<p><?php echo $trade['createAt'];?><span>&nbsp;&nbsp;&nbsp;提现</span></p>
+				<p><?php echo $trade['remark'];?></p>
 			</div>
 			<div>
-				<p>100元</p>
-				<p>处理中</p>
+				<p><?php echo $trade['amount'];?>元</p>
+				<p>已完成</p>
 			</div>
 		</div>
+			<?php }?>
+
+		<?php } //end foreach?>
+		<div class="total"><?php echo $total;?></div>
+		<div class="left"><?php echo $left;?></div>
 	</div>
 
 	<div class="bottom-bar">

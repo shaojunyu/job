@@ -110,7 +110,11 @@ class User extends CI_Controller{
 
         $this->db->where('cellphone',$this->session->userdata('cellphone'));
         $res = $this->db->get('job_user_trade');
+        $res = $res->result_array();
 
+        $this->load->view('balance_view',array(
+            'trade_array'=>$res
+        ));
 
     }
 
