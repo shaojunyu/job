@@ -19,14 +19,18 @@
 				<p>等级：4.5（满级5）</p>
 				<p>学校：<?php echo $this->session->userdata('school');?></p>
 				<p>手机：<?php echo $this->session->userdata('cellphone');?></p>
+				<?php
+				if ($this->session->userdata('isLeader') == 'YES'){
+				?>
 				<a href="./leader_management" class="leader">领队管理入口</a>
+				<?php } ?>
 			</div>
 		</div>
 
 		<div class="money-and-points clearfix">
 			<a href="./balance" class="money">
 				<p>钱包余额</p>
-				<p>359元</p>
+				<p><?php echo $balance; ?>元</p>
 				<span>点击查看明细、工资及提现</span>
 			</a>
 			<a href="./point" class="points">
@@ -45,7 +49,7 @@
 
 	<div class="bottom-bar">
 		<a href="javascript:;">我的兼职</a>
-		<a href="javascript:;">个人中心</a>
+		<a href="<?php echo base_url('/user/myself');?>">个人中心</a>
 	</div>
 </body>
 </html>

@@ -86,19 +86,34 @@ class User extends CI_Controller{
             $res = $this->db->get('job_point');
 //            var_dump($res->result_array()[0]);
             $res = $res->result_array();
-//            var_dump($res);
             $point = empty($res[0]['point'])?0:$res[0]['point'];
+
+            //获取余额
+            $this->db->where('cellphone',$this->session->userdata('cellphone'));
+            $this->db->select_sum('amount');
+            $res = $this->db->get('job_user_trade');
+            $res = $res->result_array();
+            $balance = empty($res[0]['amount'])?0:$res[0]['amount'];
             $this->load->view('myself_view',array(
-                'point'=>$point
+                'point'=>$point,
+                'balance'=>$balance
             ));
         }
     }
 
     public function balance(){
+        if (empty($this->session->userdata('cellphone'))){
+            header('Location:'.base_url().'/user/index');
+        }
+        $this->load->model('User_model');
+        $this->User_model->userInfo2session($this->session->userdata('cellphone'));
 
     }
 
     public function point(){
+        if (empty($this->session->userdata('cellphone'))){
+            header('Location:'.base_url().'/user/index');
+        }
         //获取积分
         $this->db->where('cellphone',$this->session->userdata('cellphone'));
         $res = $this->db->get('job_point');
