@@ -17,14 +17,14 @@
 
 		<div class="part-time-job-item">
 			<p class="job">四年生活线下试卷销售</p>
-			<p class="detailed-info">发布时间：2016.09.09 22:23 <a href="javascript:;">&nbsp;&nbsp;详细信息 ></a></p>
+			<p class="detailed-info">发布时间：2016.09.09 22:23 <a href="./job_info">&nbsp;&nbsp;详细信息 ></a></p>
 			<a href="javascript:;" class="create-link">马上招人，生成我的派单链接</a>
-			<a href="javascript:;" class="view">查看报名情况</a>
+			<a href="./apply_info" class="view">查看报名情况</a>
 		</div>
 	</div>
 
 	<div class="return-box">
-		<a href="javascript:;" class="return">返回</a>
+		<a href="<?php echo base_url('/user/myself');?>" class="return">返回</a>
 	</div>
 </body>
 </html>
