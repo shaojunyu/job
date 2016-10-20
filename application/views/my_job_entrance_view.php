@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/job-entrance.css">
 </head>
 <body>
-	<a href="my_job" class="myself"><span>我的兼职</span> 抢到的兼职都在这里 >></a>
+	<a href="<?php echo base_url().'user/myjob/list'; ?>" class="myself"><span>我的兼职</span> 抢到的兼职都在这里 >></a>
 	<a href="javascript:;" class="official"><span>官方发布</span> 官方直接发布的兼职都在这里 >></a>
 	<a href="javascript:;" class="questionnaire"><span>问卷调查</span> 闲暇填份问卷也能赚点钱 >></a>
 

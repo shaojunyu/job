@@ -135,7 +135,15 @@ class User extends CI_Controller{
 
     public function myjob($page = null, $jobId = null){
         if (($page == null) and ($jobId == null)){
-            $this->load->view();
+            $this->load->view('my_job_entrance_view');
+        }
+        if ($page == 'list'){
+            $this->load->view('my_job_list_view');
+        }
+        if ($page == 'jobinfo' and $jobId != null){
+            $this->load->view('my_job_info_view');
+        }else{
+            //header('Location:'.base_url().'user/myself');
         }
     }
 }

@@ -48,7 +48,7 @@
 
 
 	<div class="bottom-bar">
-		<a href="javascript:;">我的兼职</a>
+		<a href="<?php echo base_url('/user/myjob');?>">我的兼职</a>
 		<a href="<?php echo base_url('/user/myself');?>">个人中心</a>
 	</div>
 </body>
