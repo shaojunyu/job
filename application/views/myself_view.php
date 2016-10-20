@@ -22,7 +22,7 @@
 				<?php
 				if ($this->session->userdata('isLeader') == 'YES'){
 				?>
-				<a href="./leader_management" class="leader">领队管理入口</a>
+				<a href="./leader" class="leader">领队管理入口</a>
 				<?php } ?>
 			</div>
 		</div>

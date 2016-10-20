@@ -137,7 +137,7 @@ class User extends CI_Controller{
         if (empty($this->session->userdata('cellphone')) or $this->session->userdata('isLeader') != 'YES'){
             header('Location:'.base_url().'/user/index');
         }else{
-            $this->load->view();
+            $this->load->view('leader_view');
         }
     }
 }
