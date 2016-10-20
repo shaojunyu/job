@@ -10,9 +10,7 @@
 <body>
 	<div class="content">
 		<div class="title clearfix">
-			<span>华小科</span>
-			<span>编号:20161001</span>
-			<span>押金100元</span>
+			<span><?php echo $this->session->userdata('name');?></span>
 		</div>
 
 		<div class="part-time-job-item">
