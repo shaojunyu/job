@@ -69,6 +69,6 @@
 
 	<script type="text/javascript" src="<?php echo base_url();?>js/zepto.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/touch.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>js/leader.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/balance.js"></script>
 </body>
 </html>

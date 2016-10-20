@@ -104,6 +104,11 @@ body {
 	font-size: 1.2rem;
 }
 
+
+.total, .left {
+	display: none;
+}
+
 /* bottom */
 .bottom-bar {
 	width: 100%;
