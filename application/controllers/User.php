@@ -10,7 +10,7 @@ class User extends CI_Controller{
         if ( empty($this->session->userdata('cellphone')) ){
             $this->load->view('index_view');
         }else{
-            header('Location:'.base_url().'/user/myself');
+            header('Location:'.base_url().'user/myself');
         }
 
     }
@@ -49,14 +49,14 @@ class User extends CI_Controller{
 
     public function complete_info($step = 0){
         if (empty($this->session->userdata('cellphone'))){
-            header('Location:'.base_url().'/user/index');
+            header('Location:'.base_url().'user/index');
         }
         $this->load->model('User_model');
         $this->User_model->userInfo2session($this->session->userdata('cellphone'));
         $session_data = $this->session->userdata();
 //        var_dump($this->session->userdata());
         if ( !empty($session_data['name']) and !empty($session_data['sex']) and !empty($session_data['QQ']) ){
-            header('Location:'.base_url().'/user/myself');
+            header('Location:'.base_url().'user/myself');
         }
 
         if ($step == 0){
@@ -103,7 +103,7 @@ class User extends CI_Controller{
 
     public function balance(){
         if (empty($this->session->userdata('cellphone'))){
-            header('Location:'.base_url().'/user/index');
+            header('Location:'.base_url().'user/index');
         }
         $this->load->model('User_model');
         $this->User_model->userInfo2session($this->session->userdata('cellphone'));
@@ -121,7 +121,7 @@ class User extends CI_Controller{
     public function point(){
         
         if (empty($this->session->userdata('cellphone'))){
-            header('Location:'.base_url().'/user/index');
+            header('Location:'.base_url().'user/index');
         }else{
             //获取积分
             $this->db->where('cellphone',$this->session->userdata('cellphone'));
@@ -135,7 +135,7 @@ class User extends CI_Controller{
 
     public function leader(){
         if (empty($this->session->userdata('cellphone')) or $this->session->userdata('isLeader') != 'YES'){
-            header('Location:'.base_url().'/user/index');
+            header('Location:'.base_url().'user/index');
         }else{
             $this->load->view('leader_view');
         }

@@ -12,7 +12,7 @@ class Leader extends CI_Controller{
         parent::__construct();
         $this->load->model('User_model');
         if (empty($this->session->userdata('cellphone')) or $this->session->userdata('isLeader') != 'YES'){
-            header('Location:'.base_url().'/user/index');
+            header('Location:'.base_url().'user/index');
         }
     }
     public function index(){
