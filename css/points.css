@@ -118,6 +118,10 @@ body {
 	display: none;
 }
 
+.total, .left {
+	display: none;
+}
+
 /* bottom */
 .bottom-bar {
 	width: 100%;

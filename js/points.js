@@ -1,7 +1,10 @@
 $(function () {
-	$(".exchange a").tap(function () {
+	$(".exchange a").click(function () {
 		showMsg("正在研发中，多多积分吧，绝对震撼功能~");
 	});
+
+	$(".total-points").html($(".total").html());
+	$(".left-points").html($(".left").html());
 });
 
 //消息显示框显示

@@ -13,11 +13,11 @@
 		<div class="points-info clearfix">
 			<div>
 				<p><span class="red-round"></span>总积分</p>
-				<p>8888.00元</p>
+				<p class="total-points"></p>
 			</div>
 			<div>
 				<p><span class="blue-round"></span>剩余积分</p>
-				<p>888.00元</p>
+				<p class="left-points"></p>
 			</div>
 		</div>
 		<div class="exchange">
@@ -40,8 +40,8 @@
 			<p><?php  echo $point['remark']?></p>
 		</div>
 		<?php }?>
-		<div><?php echo $total;?></div>
-		<div><?php echo $left;?></div>
+		<div class="total"><?php echo $total;?></div>
+		<div class="left"><?php echo $left;?></div>
 	</div>
 
 	<!-- 弹出消息 -->
@@ -51,5 +51,8 @@
 		<a href="javascript:;">我的兼职</a>
 		<a href="javascript:;">个人中心</a>
 	</div>
+
+	<script type="text/javascript" src="<?php echo base_url();?>js/zepto.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/points.js"></script>
 </body>
 </html>
