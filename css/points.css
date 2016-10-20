@@ -102,6 +102,22 @@ body {
 	line-height: 1.8rem;
 }
 
+/* prompt-box-points */
+.prompt-box-points {
+	width: 80%;
+	font-size: 1.2rem;
+	line-height: 2.5rem;
+	background-color: #f69743;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 1px;
+	position: fixed;
+	top: 3.5rem;
+	left: 10%;
+	z-index: 999;
+	display: none;
+}
+
 /* bottom */
 .bottom-bar {
 	width: 100%;
