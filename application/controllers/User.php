@@ -99,6 +99,22 @@ class User extends CI_Controller{
     }
 
     public function point(){
-
+        //获取积分
+        $this->db->where('cellphone',$this->session->userdata('cellphone'));
+        $res = $this->db->get('job_point');
+        $res = $res->result_array();
+        
+        if (empty($this->session->userdata('cellphone'))){
+            header('Location:'.base_url().'/user/index');
+        }else{
+            //获取积分
+            $this->db->where('cellphone',$this->session->userdata('cellphone'));
+            $res = $this->db->get('job_point');
+            $res = $res->result_array();
+//            var_dump($res);
+            $this->load->view('points_view',array(
+                'point_array'=>$res
+            ));
+        }
     }
 }

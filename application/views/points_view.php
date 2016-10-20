@@ -24,11 +24,24 @@
 			<a href="javscript:;">积分换好礼</a>
 		</div>
 
+		<?php
+		$total = 0;
+		$left = 0;
+
+		foreach ($point_array as $point){
+			$left +=$point['point'];
+			if ($point['point']>0){$total += $point['point'];}
+		?>
 		<div class="points-change clearfix">
-			<p>2016年8月19日 19:08 <span>&nbsp;&nbsp;&nbsp;奖励</span></p>
-			<p>+356分</p>
-			<p>四年生活销售兼职工资发放</p>
+			<p><?php  echo $point['createAt']?><span>&nbsp;&nbsp;&nbsp;
+				<?php if($point['point']>0){echo '获得积分';}else{echo '使用积分';}?>
+				</span></p>
+			<p><?php  echo $point['point']?></p>
+			<p><?php  echo $point['remark']?></p>
 		</div>
+		<?php }?>
+		<div><?php echo $total;?></div>
+		<div><?php echo $left;?></div>
 	</div>
 
 	<div class="bottom-bar">
