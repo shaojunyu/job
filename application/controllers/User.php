@@ -133,11 +133,9 @@ class User extends CI_Controller{
         }
     }
 
-    public function leader(){
-        if (empty($this->session->userdata('cellphone')) or $this->session->userdata('isLeader') != 'YES'){
-            header('Location:'.base_url().'user/index');
-        }else{
-            $this->load->view('leader_view');
+    public function myjob($page = null, $jobId = null){
+        if (($page == null) and ($jobId == null)){
+            $this->load->view();
         }
     }
 }
