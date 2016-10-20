@@ -108,16 +108,13 @@ class User extends CI_Controller{
         $this->load->model('User_model');
         $this->User_model->userInfo2session($this->session->userdata('cellphone'));
 
+        $this->db->where('cellphone',$this->session->userdata('cellphone'));
+        $res = $this->db->get('job_user_trade');
+
+
     }
 
     public function point(){
-        if (empty($this->session->userdata('cellphone'))){
-            header('Location:'.base_url().'/user/index');
-        }
-        //获取积分
-        $this->db->where('cellphone',$this->session->userdata('cellphone'));
-        $res = $this->db->get('job_point');
-        $res = $res->result_array();
         
         if (empty($this->session->userdata('cellphone'))){
             header('Location:'.base_url().'/user/index');
