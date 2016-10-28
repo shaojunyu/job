@@ -25,20 +25,23 @@ class Business extends CI_Controller{
     		$this->db->where('password', $password);
     		$this->db->where('approved','YES');
     		$res = $this->db->count_all_results('job_business');
-    		// echo $res;
+    		echo $res;
     		if ($res == 1) {
     			$this->session->set_userdata('business','business');
     			$this->load->view('business_view');
     		}else{
-    			header(base_url('business/login?error'));
+    			// header(base_url('business/login?error'));
+    			$this->load->view('business_login_view');
     		}
     	}else{
     		$this->load->view('business_login_view');
     	}
     }
 
-    public function apply()
+    public function cooperation()
     {
+    	
+    	$this->load->view('business_cooperation_view');
     	# code...
     }
 
