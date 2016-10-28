@@ -36,6 +36,10 @@ $(function () {
 		$(".content1").hide();
 		$(".content").show();
 	});
+
+	setInterval(function () {
+		console.log($(".begin-date").val());
+	}, 3000);
 });
 
 //消息显示框显示

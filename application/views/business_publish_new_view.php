@@ -43,7 +43,7 @@
 				<div>
 					<span>兼职标题</span>
 				</div>
-				<p><input type="text" placeholder="请输入兼职标题"></p>
+				<p><input type="text" class="job-title" placeholder="请输入兼职标题"></p>
 			</div>
 			<div class="item2 clearfix">
 				<div>
@@ -56,31 +56,31 @@
 				<div>
 					<span>兼职时段</span>
 				</div>
-				<p><input type="text" placeholder="请输入兼职时段"><br><input type="checkbox"> 上班时间不限，完成任务即可</p>
+				<p><input type="text" class="period" placeholder="请输入兼职时段"><br><input type="checkbox"> 上班时间不限，完成任务即可</p>
 			</div>
 			<div class="item2 clearfix">
 				<div>
 					<span>工作地点</span>
 				</div>
-				<p><input type="text" placeholder="请输入兼职地点"><br><input type="checkbox"> 上班地点不限，完成任务即可</p>
+				<p><input type="text" class="site" placeholder="请输入兼职地点"><br><input type="checkbox"> 上班地点不限，完成任务即可</p>
 			</div>
 			<div class="item2 clearfix">
 				<div>
 					<span>招聘人数</span>
 				</div>
-				<p><input type="tel" placeholder="请输入有效数字">人</p>
+				<p><input type="tel" class="number" placeholder="请输入有效数字">人</p>
 			</div>
 			<div class="item2 clearfix">
 				<div>
 					<span>工资待遇</span>
 				</div>
-				<p><input type="text" placeholder="请输入工资待遇"></p>
+				<p><input type="text" class="salary" placeholder="请输入工资待遇"></p>
 			</div>
 			<div class="item2 clearfix">
 				<div>
 					<span>工作要求</span>
 				</div>
-				<p><textarea placeholder="请输入相关的工作说明，岗位要求，说明兼职要求及工作要求，必须与实际情况符合，不能有任何隐瞒条件"></textarea></p>
+				<p><textarea class="requirement" placeholder="请输入相关的工作说明，岗位要求，说明兼职要求及工作要求，必须与实际情况符合，不能有任何隐瞒条件"></textarea></p>
 			</div>
 
 			<a href="javascript:;" class="next2">下一步</a>
