@@ -14,13 +14,14 @@
 			<p>四年兼职商家版</p>
 		</div>
 
-		<form>
-			<input type="tel" class="phone" placeholder="请输入手机号">
+		<form method="POST" action="">
+			<input type="tel" class="phone" name="cellphone" placeholder="请输入手机号">
+			<input type="password" class="password" name="password" placeholder="请输入密码">
 
-			<div class="codes-box clearfix">
+			<!-- <div class="codes-box clearfix">
 				<input type="tel" class="codes" placeholder="输入验证码">
 				<a href="javascript:;" class="get">获取验证码</a>
-			</div>
+			</div> -->
 			
 			<a href="javascript:;" class="next">确认登录</a>
 			<a href="javascript:;" class="cooperation">商家初次合作申请</a>
