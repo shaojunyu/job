@@ -24,7 +24,7 @@
 	</div>
 
 	<div class="bottom-bar">
-		<a href="<?php echo base_url('business/publish'); ?>">发布兼职</a>
+		<a href="<?php echo base_url('business/published'); ?>">发布兼职</a>
 		<a href="<?php echo base_url('business'); ?>">商户中心</a>
 	</div>
 </body>

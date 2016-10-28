@@ -21,15 +21,32 @@ class Business extends CI_Controller{
     	
     }
 
-    public function publish()
+    public function published()
     {
     	if ($this->session->userdata('business')) {
-    		$this->load->view('business_view');
+    		$this->db->where('published_by',$this->session->userdata('business'));
+    		$this->db->where('isPaid','YES')->order_by('Id','DESC');
+    		$res = $this->db->get('job_job')->result_array();
+    		$this->load->view('business_published_job_view.php',[
+    			'published_jobs'=>$res
+    			]);
     		# code...
     	}else{
     		header('Location: '.base_url('business/login'));
     	}
-    	# code...
+    }
+
+    public function publish_new($step = 1)
+    {
+    	if ($this->session->userdata('business')) {
+    		if ($step == 1) {
+    			
+    		}else{
+
+    		}
+    	}else{
+    		header('Location: '.base_url('business/login'));
+    	}
     }
 
     public function login()

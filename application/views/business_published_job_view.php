@@ -9,21 +9,25 @@
 </head>
 <body>
 	<div class="content">
+	<?php
+		foreach ($published_jobs as $job) {
+	 ?>
 		<div class="job">
 			<p class="title">四年生活线下试卷销售</p>
 			<p class="detailed">发布时间：<span class="time">2016.09.19 23:39</span>&nbsp;&nbsp;<a href="javascript:;">查看详情 ></a></p>
 			<div class="link-box clearfix">
-				<div><a href="javascript:;">查看情况</a></div>
+				<div><a href="javascript:;">报名情况</a></div>
 				<div><a href="javascript:;">发工资</a></div>
 			</div>
 		</div>
+		<?php } ?>
 	</div>
 
-	<div class="release-wrapper"><a href="javascript:;" class="release">发布新的兼职</a></div>
+	<div class="release-wrapper"><a href="<?php echo base_url('business/publish_new'); ?>" class="release">发布新的兼职</a></div>
 
 	<div class="bottom-bar clearfix">
-		<a href="javascript:;">发布兼职</a>
-		<a href="javascript:;">商户中心</a>
+		<a href="<?php echo base_url('business/published'); ?>">发布兼职</a>
+		<a href="<?php echo base_url('business'); ?>">商户中心</a>
 	</div>
 
 	<script type="text/javascript" src="<?php echo base_url();?>js/zepto.min.js"></script>
