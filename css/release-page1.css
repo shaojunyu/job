@@ -38,7 +38,7 @@ a.click {
 	color: #fff;
 	border-color: #ff168a;
 }
-.next {
+.next1 {
 	display: block;
 	text-align: center;
 	background-color: #ff7043;
@@ -51,7 +51,87 @@ a.click {
 	border-radius: 5px;
 	border: 1px solid #ff7043;
 }
-.next:active, .next:hover {
+.next1:active, .next1:hover {
+	color: #fff;
+}
+
+/* content */
+.content {
+	width: 97%;
+	margin: 1rem auto;
+	padding-bottom: 3rem;
+}
+.item2 {
+	width: 100%;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid #bcbfc6;
+	font-size: 1rem;
+}
+.item2 div, .item2 p, .item2 ul {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.item2 div {
+	float: left;
+	width: 25%;
+	text-align: center;
+	line-height: 2rem;
+}
+.item2 p, .item2 ul {
+	float: right;
+	width: 75%;
+	padding-left: 5px;
+	line-height: 2.2rem;
+	border-left: 1px solid #bcbfc6;
+}
+.item2 p input[type='text'], .item2 p input[type='tel'] {
+	width: 82%;
+	font-size: 1.1rem;
+	height: 2rem;
+}
+.item2 p input[type='checkbox'] {
+	width: 1rem;
+	height: 1rem;
+}
+.date {
+	text-align: center;
+}
+.begin-date, .end-date {
+	width: 60%;
+	font-size: 1.1rem;
+	line-height: 2rem;
+	height: 2rem;
+	color: #000;
+	background-color: transparent;
+}
+input[type="date"]:before{
+    content: attr(placeholder);
+    color: #000;
+}
+textarea {
+	width: 95%;
+	height: 7rem;
+	font-size: 1.1rem;
+	resize: none;
+}
+.item2 li {
+	line-height: 2rem;
+}
+
+/* next */
+.next2 {
+	display: block;
+	text-align: center;
+	background-color: #ff7043;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	width: 60%;
+	line-height: 2.5rem;
+	margin: 1rem auto;
+}
+.next2:hover {
 	color: #fff;
 }
 
