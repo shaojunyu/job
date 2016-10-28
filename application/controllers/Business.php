@@ -10,4 +10,22 @@ class Business extends CI_Controller{
     {
         parent::__construct();
     }
+
+    public function index()
+    {
+    	# code...
+    }
+
+    public function login()
+    {
+    	$this->load->view('business_login_view');
+    	# code...
+    }
+
+    public function apply()
+    {
+    	# code...
+    }
+
+    
 }

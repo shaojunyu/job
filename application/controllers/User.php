@@ -12,7 +12,6 @@ class User extends CI_Controller{
         }else{
             header('Location:'.base_url().'user/myself');
         }
-
     }
 
     public function login(){
