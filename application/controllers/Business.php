@@ -25,7 +25,7 @@ class Business extends CI_Controller{
     {
     	if ($this->session->userdata('business')) {
     		$this->db->where('published_by',$this->session->userdata('business'));
-    		$this->db->where('isPaid','YES')->order_by('Id','DESC');
+    		$this->db->order_by('Id','DESC');
     		$res = $this->db->get('job_job')->result_array();
     		$this->load->view('business_published_job_view.php',[
     			'published_jobs'=>$res
@@ -36,14 +36,10 @@ class Business extends CI_Controller{
     	}
     }
 
-    public function publish_new($step = 1)
+    public function publish_new()
     {
     	if ($this->session->userdata('business')) {
-    		if ($step == 1) {
-    			
-    		}else{
-
-    		}
+    		$this->load->view('business_publish_new_view');
     	}else{
     		header('Location: '.base_url('business/login'));
     	}
