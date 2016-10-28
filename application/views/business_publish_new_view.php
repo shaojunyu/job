@@ -23,7 +23,7 @@
 					<li><a href="javascript:;" class="item">代理</a></li>
 				</ul>
 			</div>
-
+			<input type="text" style="display: none;" class="tag1" value="">
 			<div class="skill">
 				<p>技能兼职</p>
 				<ul class="skiil-part-time-job clearfix">
@@ -35,7 +35,7 @@
 					<li><a href="javascript:;" class="item">摄影</a></li>
 				</ul>
 			</div>
-					
+			<input type="text" style="display: none;" class="tag2" value="">
 			<a href="javascript:;" class="next1">下一步</a>
 		</div>
 		<div class="content">
@@ -56,13 +56,13 @@
 				<div>
 					<span>兼职时段</span>
 				</div>
-				<p><input type="text" class="period" placeholder="请输入兼职时段"><br><input type="checkbox"> 上班时间不限，完成任务即可</p>
+				<p><input type="text" class="period" placeholder="请输入兼职时段"><br><input class="check1" type="checkbox"> 上班时间不限，完成任务即可</p>
 			</div>
 			<div class="item2 clearfix">
 				<div>
 					<span>工作地点</span>
 				</div>
-				<p><input type="text" class="site" placeholder="请输入兼职地点"><br><input type="checkbox"> 上班地点不限，完成任务即可</p>
+				<p><input type="text" class="site" placeholder="请输入兼职地点"><br><input class="check2" type="checkbox"> 上班地点不限，完成任务即可</p>
 			</div>
 			<div class="item2 clearfix">
 				<div>
