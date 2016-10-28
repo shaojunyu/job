@@ -92,6 +92,8 @@ $(function () {
 			return;
 		}
 
+		$(".phone").val($(".phone").val().split("-").join(""));
+
 		//发送请求
 		$("form").submit();
 	});
