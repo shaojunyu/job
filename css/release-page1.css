@@ -60,6 +60,7 @@ a.click {
 	width: 97%;
 	margin: 1rem auto;
 	padding-bottom: 3rem;
+	display: none;
 }
 .item2 {
 	width: 100%;
