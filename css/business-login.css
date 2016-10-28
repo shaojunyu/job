@@ -28,6 +28,7 @@ form input {
 	border: 1px solid #9b9b9b;
 	text-indent: 2rem;
 	background-color: #fff;
+	margin-bottom: 1rem;
 }
 .next {
 	display: block;
@@ -83,6 +84,11 @@ form a:active, form a:hover {
 	background: #fff url('../images/phone.png') no-repeat 5px center;
 	background-size: 1.25rem;
 }
+.password {
+	background: #fff url('../images/psw.png') no-repeat 5px center;
+	background-size: 1.25rem;
+}
+
 @media screen and (max-width: 320px) {
 	form {
 		width: 80%;

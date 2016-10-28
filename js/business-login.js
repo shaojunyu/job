@@ -28,14 +28,14 @@ $(function () {
 	});
 
 	//验证码输入处理
-	$(".codes").focus(function() { //获得焦点
+	/*$(".codes").focus(function() { //获得焦点
 		if($(this).css("color") == "red") {
 			hideError($(this));
 		}
-	});
+	});*/
 
 	//获取短信验证码
-	$(".get").click(function () {
+	/*$(".get").click(function () {
 		//手机号判断
 		var isPhoneOk = formMathod.phoneCheck($(".phone")[0]);
 		if(typeof isPhoneOk === "string") {
@@ -48,7 +48,7 @@ $(function () {
 
 		//发送验证码
 		var phoneNum = $(".phone").val().split("-").join("");
-		var data = {};
+		var data = {};*/
 
 		/*$.ajax({
 	        //url: secret("../api/sendSmscode"),
@@ -65,9 +65,17 @@ $(function () {
 	        	 alert("请求失败!");
 	    	}
 	    });*/
+/*	});*/
+
+	//密码输入处理
+	$(".password").focus(function() { //获得焦点
+		$(this).attr("type", "password");
+		if($(this).css("color") == "red") {
+			hideError($(this));
+		}
 	});
 
-	//下一步
+	//密码登录
 	$(".next").tap(function () {
 		//验证手机号是否正确
 		var isPhoneOk = formMathod.phoneCheck($(".phone")[0]);
@@ -76,16 +84,16 @@ $(function () {
 			return;
 		}
 
-		//验证手机验证码
-		var smscode = $.trim($(".codes").val());
-		if(!smscode) {
-			showError($(".codes"), "请输入验证码");
+		//验证密码
+		var isPasswordOk = formMathod.passwdCheck($(".password")[0]);
+		if(typeof isPasswordOk === "string") {
+			$(".password").attr("type", "text");
+			showError($(".password"), isPasswordOk);
 			return;
 		}
 
 		//发送请求
-
-
+		$("form").submit();
 	});
 });
 
@@ -106,6 +114,40 @@ formMathod.phoneCheck = function(input) { //参数为表单元素
 	return true;
 };
 
+//密码验证
+formMathod.passwdRegZH = /^[^\u4E00-\u9FA5]{5,20}$/;
+formMathod.passwdRegQJ = /^[^\uFF00-\uFFFF]{5,20}$/;
+formMathod.passwdRegSp = /\s/;
+var passwdErr = ["密码不能为空!","密码长度不得小于6!","密码不能含有中文!","密码不能含有空格!","密码不能含有全角字符!"];
+formMathod.passwdCheck = function(input) { //验证非中文和全角
+	var val = input.value;
+	var msg = "";
+	if(val.length === 0 || val === passwdErr[0] || val === passwdErr[1] || val === passwdErr[2] || val === passwdErr[3] || val === passwdErr[4]) {
+		msg = "密码不能为空!";
+	}
+	else if(val.length < 6) {
+		msg = "密码长度不得小于6!";
+	}
+	else if(!formMathod.passwdRegZH.test(val)) {
+		msg = "密码不能含有中文!";
+	}
+	else if(formMathod.passwdRegSp.test(val)) {
+		msg = "密码不能含有空格!";
+	}
+	else if(!formMathod.passwdRegQJ.test(val)) {
+		msg = "密码不能含有全角字符!";
+	}
+
+	if(msg === "") {
+		return true;
+	}
+	else {
+		input.value = "";
+		return msg;
+	}
+};
+
+
 //显示错误提示
 function showError(input, err) {
 	input.css("color", "red");
@@ -119,7 +161,7 @@ function hideError(inputElem) {
 }
 
 //1分钟后重试
-function getDisable() {
+/*function getDisable() {
 	var time = 59;
 	$(".get").html(time + "秒后重试");
 	var timer = setInterval(function () {
@@ -131,4 +173,4 @@ function getDisable() {
 		}
 		$(".get").html(time + "秒后重试");
 	}, 1000);
-}
+}*/
