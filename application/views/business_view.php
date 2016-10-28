@@ -11,15 +11,15 @@
 	<div class="content">
 		<p class="clearfix">
 			<sapn>商家名称：</sapn>
-			<span>四年生活</span>
+			<span><?php echo $this->session->userdata('name'); ?></span>
 		</p>
 		<p class="clearfix">
 			<sapn>联系电话：</sapn>
-			<span>13166668888</span>
+			<span><?php echo $this->session->userdata('cellphone'); ?></span>
 		</p>
 		<p class="clearfix">
 			<sapn>商家地址：</sapn>
-			<span>华中科技大学</span>
+			<span><?php echo $this->session->userdata('location'); ?></span>
 		</p>
 	</div>
 
