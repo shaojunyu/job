@@ -10,7 +10,7 @@
 <body>
 	<div class="content">
 		<div class="logo">
-			<img src="images/logo.png">
+			<img src="<?php echo base_url();?>images/logo.png">
 			<p>四年兼职商家版</p>
 		</div>
 

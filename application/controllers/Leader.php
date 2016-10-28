@@ -18,4 +18,9 @@ class Leader extends CI_Controller{
     public function index(){
         $this->load->view('leader_view');
     }
+
+    public function apply_info($job_id='')
+    {
+        # code...
+    }
 }
