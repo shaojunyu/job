@@ -23,7 +23,7 @@ class Business extends CI_Controller{
 
     public function publish()
     {
-    	if (condition) {
+    	if ($this->session->userdata('business')) {
     		$this->load->view('business_view');
     		# code...
     	}else{

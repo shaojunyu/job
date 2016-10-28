@@ -24,8 +24,8 @@
 	</div>
 
 	<div class="bottom-bar">
-		<a href="javascript:;">发布兼职</a>
-		<a href="javascript:;">商户中心</a>
+		<a href="<?php echo base_url('business/publish'); ?>">发布兼职</a>
+		<a href="<?php echo base_url('business'); ?>">商户中心</a>
 	</div>
 </body>
 </html>
