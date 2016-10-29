@@ -24,7 +24,7 @@
 			</div> -->
 			
 			<a href="javascript:;" class="next">确认登录</a>
-			<a href="javascript:;" class="cooperation">商家初次合作申请</a>
+			<a href="<?php echo base_url('business/cooperation');?>" class="cooperation">商家初次合作申请</a>
 		</form>
 	</div>
 

@@ -84,15 +84,20 @@ $(function () {
 			return;
 		}
 
-		$("phone").val($("phone").val().split("-").join(""));
+		$(".phone").val($(".phone").val().split("-").join(""));
 
 		//发送请求
 		$.ajax({
         	type: "POST",
-        	url: "./",
+        	url: "./cooperation",
         	data: $("form").serialize(), // serializes the form's elements.
         	success: function (data) {
-            	showMsg("申请成功，等待审核");
+        		if(data === "ok") {
+        			showMsg("申请成功，等待审核");
+        		}
+            	else {
+            		showMsg("申请失败");
+            	}
         	},
         	error: function () {
         		showMsg("请求失败，请重试");
