@@ -36,50 +36,7 @@ $(function () {
 		}
 		$(this).val(str || val);
 	});
-/*
-	//密码登录
-	$(".next-by-passwd").tap(function () {
-		//验证手机号是否正确
-		var isPhoneOk = formMathod.phoneCheck($(".phone")[0]);
-		if(typeof isPhoneOk === "string") {
-			showError($(".phone"), isPhoneOk);
-			return;
-		}
 
-		//验证密码
-		var isPasswordOk = formMathod.passwdCheck($(".password")[0]);
-		if(typeof isPasswordOk === "string") {
-			$(".password").attr("type", "text");
-			showError($(".password"), isPasswordOk);
-			return;
-		}
-
-		//密码登录
-		var data = {
-			cellphone: $.trim($(".phone").val()).split("-").join(""),
-			password: $(".password").val()
-		};
-		$.ajax({
-	        url: '../api/login',
-	        contentType: "application/json",
-	        dataType: "json",
-	        type: "POST",
-	        data: JSON.stringify(data),
-	        success: function(data) {
-	        	if(data.success) {
-	        		window.location.href = "../user/myself";
-	        	}
-				else {
-	        		showMsg("用户名或密码错误");
-	        	}
-	        },
-		    error: function(XMLHttpRequest, textStatus, errorThrown){  
-		        showMsg("请求失败，请刷新重试"); 
-		    }
-	    });
-	});
-
-*/
 	//验证码输入处理
 	$(".codes").focus(function() { //获得焦点
 		if($(this).css("color") == "red") {
@@ -90,18 +47,11 @@ $(function () {
 	//获取短信验证码
 	$(".get").tap(function () {
 		var isPhoneOk = formMathod.phoneCheck($(".phone")[0]);
-		if(typeof isPhoneOk === "string") {
-			showError($(".phone"), isPhoneOk);
-			return;
-		}
-		else if($(this).html() !== "获取验证码") {
+		if($(this).html() !== "获取验证码") {
 			return;
 		}
 		//发送验证码
 		var phoneNum = $(".phone").val().split("-").join("");
-		var data = {
-			cellphone: phoneNum
-		};
 		
 		
 	});
