@@ -22,6 +22,17 @@ class Apply extends CI_controller
 
 	public function apply_job($code='')
 	{
-		# code...
+		if (empty($code)) {
+			header('Location: '.base_url());
+		}
+		$res = $this->db->where('code',$code)->get('job_leader')->result_array();
+		if (count($res) == 0) {
+			header('Location: '.base_url());
+		}
+		if (!$this->session->userdata('cellphone')) {
+			header('Location: '.base_url('user/login?code='.$code));
+		}
+		$job_id = $res[0]['job_id'];
+		$this->load->view('rush_payment_view');
 	}
 }

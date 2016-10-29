@@ -14,7 +14,7 @@
 </div>
 
 <form>
-    <input type="tel" class="phone" placeholder="" readonly="readonly" value="<?php echo $cellphone;?>">
+    <input type="tel" class="phone" placeholder="请输入手机号" readonly="readonly" value="<?php echo $cellphone;?>">
 
     <div class="password-box">
         <input type="password" class="password" placeholder="请输入密码">

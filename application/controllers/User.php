@@ -21,14 +21,15 @@ class User extends CI_Controller{
         $cellphone = $this->input->post('cellphone');
         $password = $this->input->post('password');
         if (empty($cellphone)){
-
+            $this->load->view('user_login_view',array('cellphone'=>''));
+            
         }else{
             $this->db->where('cellphone',$cellphone);
             $this->db->get('user');
             if ($this->db->affected_rows() == 1){
                 $this->load->view('user_login_view',array('cellphone'=>$cellphone));
             }else{
-                echo $cellphone;
+                // echo $cellphone;
                 //echo $this->db->affected_rows();
 //                $this->load->view('signup1_view',array('cellphone'=>$cellphone));
                 header('Location:'.base_url().'user/signup1/'.$cellphone);
