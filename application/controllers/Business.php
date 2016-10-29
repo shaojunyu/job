@@ -21,7 +21,7 @@ class Business extends CI_Controller{
     	
     }
 
-    public function published()
+    public function job_list()
     {
     	if ($this->session->userdata('business')) {
     		$this->db->where('published_by',$this->session->userdata('business'));
@@ -30,7 +30,6 @@ class Business extends CI_Controller{
     		$this->load->view('business_published_job_view.php',[
     			'published_jobs'=>$res
     			]);
-    		# code...
     	}else{
     		header('Location: '.base_url('business/login'));
     	}
@@ -43,6 +42,29 @@ class Business extends CI_Controller{
     	}else{
     		header('Location: '.base_url('business/login'));
     	}
+    }
+
+    public function submit_job()
+    {
+    	if (!$this->session->userdata('business')) {
+    		header('Location: '.base_url('business/login'));
+    	}
+    	var_dump($this->input->post());
+    	$this->db->insert('job_job',[
+    		'tag1'=>$this->input->post('tag1'),
+    		'tag2'=>$this->input->post('tag2'),
+    		'name'=>$this->input->post('name'),
+    		'number'=>$this->input->post('number'),
+    		'left'=>$this->input->post('number'),
+    		'start_date'=>$this->input->post('start_date'),
+    		'end_date'=>$this->input->post('end_date'),
+    		'period'=>$this->input->post('period'),
+    		'site'=>$this->input->post('site'),
+    		'salary'=>$this->input->post('salary'),
+    		'requirement'=>$this->input->post('requirement'),
+			'published_by'=>$this->session->userdata('business')
+    		]);
+    	header('Location: '.base_url('business/job_list'));
     }
 
     public function login()

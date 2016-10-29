@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/release-page1.css">
 </head>
 <body>
-	<form method="POST" action="">
+	<form method="POST" action="<?php echo base_url('business/submit_job'); ?>">
 		<div class="content1">
 			<p class="intro">选择兼职类型</p>
 
@@ -83,7 +83,7 @@
 				<p><textarea class="requirement" name="requirement" placeholder="请输入相关的工作说明，岗位要求，说明兼职要求及工作要求，必须与实际情况符合，不能有任何隐瞒条件"></textarea></p>
 			</div>
 
-			<a href="javascript:;" class="next2">下一步</a>
+			<a href="javascript:;" class="next2">提交兼职</a>
 		</div>
 	</form>
 	<div class="bottom-bar clearfix">

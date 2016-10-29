@@ -18,7 +18,7 @@
     <input type="submit" class="next" value="下一步">
 </form>
 
-<a href="javascript:;" class="business">商家入口</a>
+<a href="<?php echo base_url('business'); ?>" class="business">商家入口</a>
 
 <footer>&copy;四年生活</footer>
 
