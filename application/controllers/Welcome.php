@@ -26,4 +26,10 @@ class Welcome extends CI_Controller {
 		header('Location:./user/index');
 
 	}
+
+	public function test($value='')
+	{
+		$this->load->model('Sms_model');
+		# code...
+	}
 }

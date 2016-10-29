@@ -6,35 +6,6 @@
 class Sms_model extends CI_model
 {
 	
-	// header('content-type:text/html;charset=utf-8');
-	 
-	$sendUrl = 'http://v.juhe.cn/sms/send'; //短信接口的URL
-	 
-	$smsConf = array(
-	'key'   => '*****************', //您申请的APPKEY
-	    'mobile'    => '1891351****', //接受短信的用户手机号码
-	    'tpl_id'    => '111', //您申请的短信模板ID，根据实际情况修改
-	    'tpl_value' =>'#code#=1234&#company#=聚合数据' //您设置的模板变量，根据实际情况修改
-	);
-
-	$content = juhecurl($sendUrl,$smsConf,1); //请求发送短信
-
-	if($content){
-	    $result = json_decode($content,true);
-	    $error_code = $result['error_code'];
-	    if($error_code == 0){
-	        //状态为0，说明短信发送成功
-	        echo "短信发送成功,短信ID：".$result['result']['sid'];
-	    }else{
-	        //状态非0，说明失败
-	        $msg = $result['reason'];
-	        echo "短信发送失败(".$error_code.")：".$msg;
-	    }
-	}else{
-	    //返回内容异常，以下可根据业务逻辑自行修改
-	    echo "请求发送短信失败";
-	}
-
 	/**
 	 * 请求接口返回内容
 	 * @param  string $url [请求的URL地址]
