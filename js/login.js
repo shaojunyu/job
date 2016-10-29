@@ -154,6 +154,7 @@ $(function () {
 			url: "../api/sms_code_login/" + phoneNum + "/" + smsCode,
 			type: "GET",
 			success: function(data) {
+				data = JSON.parse(data);
 	        	if(data.success) {
 	        		window.location.href = "../user/myself";
 	        	}

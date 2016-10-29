@@ -21,8 +21,11 @@
 			<a href="javascript:;" class="get">获取验证码</a>
 		</div>
 		
-		<input type="submit" class="next" value="下一步">
+		<input class="next" value="下一步">
 	</form>
+
+	<!-- 弹出消息 -->
+	<div class="prompt-box"></div>
 
 	<script type="text/javascript" src="<?php echo base_url();?>js/zepto.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/touch.js"></script>

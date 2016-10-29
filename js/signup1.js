@@ -50,14 +50,23 @@ $(function () {
 		if($(this).html() !== "获取验证码") {
 			return;
 		}
+
 		//发送验证码
 		var phoneNum = $(".phone").val().split("-").join("");
-		
-		
+		$.ajax({
+			url: "../../api/send_sms_code/" + phoneNum,
+			type: "GET",
+			success: function(data) {
+	        	
+	        },
+	        error: function(XMLHttpRequest, textStatus, errorThrown){  
+		        showMsg("请求失败，请重试"); 
+		    }
+		});
 	});
 
 	//注册第一步
-	/*$(".next").tap(function () {
+	$(".next").tap(function () {
 		//验证手机号是否正确
 		var isPhoneOk = formMathod.phoneCheck($(".phone")[0]);
 		if(typeof isPhoneOk === "string") {
@@ -72,9 +81,27 @@ $(function () {
 			return;
 		}
 
-		//发送验证码登录请求
+		//验证码验证
+		var phoneNum = $(".phone").val().split("-").join("");
+		var smsCode = $(".codes").val();
+		$.ajax({
+			url: "../../api/verify_sms_code/" + phoneNum + "/" + smsCode,
+			type: "GET",
+			success: function(data) {
+				data = JSON.parse(data);
+	        	if(data.success) {
+	        		$("form").submit();
+	        	}
+	        	else {
+	        		showMsg(data.msg);
+	        	}
+	        },
+	        error: function(XMLHttpRequest, textStatus, errorThrown){  
+		        showMsg("请求失败，请重试"); 
+		    }
+		});
 	});
-*/
+
 });
 
 /* 表单验证对象 */
