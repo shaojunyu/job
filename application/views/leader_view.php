@@ -12,13 +12,18 @@
 		<div class="title clearfix">
 			<span><?php echo $this->session->userdata('name');?></span>
 		</div>
-
+		<?php
+		foreach ($my_leading_jobs as $leading_job) {
+			$res = $this->db->where('id',$leading_job['job_id'])->limit(1)->get('job_job')->result_array();
+			$res = $res[0];
+		?>
 		<div class="part-time-job-item">
-			<p class="job">四年生活线下试卷销售</p>
-			<p class="detailed-info">发布时间：2016.09.09 22:23 <a href="./job_info">&nbsp;&nbsp;详细信息 ></a></p>
+			<p class="job"><?php echo $res['name']; ?></p>
+			<p class="detailed-info">发布时间：<?php echo $res['create_at']; ?> <a href="<?php echo base_url('leader/job_info/'.$leading_job['job_id']); ?>">&nbsp;&nbsp;详细信息 ></a></p>
 			<a href="javascript:;" class="create-link">马上招人，生成我的派单链接</a>
-			<a href="./apply_info" class="view">查看报名情况</a>
+			<a href="<?php echo base_url('leader/apply_info/'.$leading_job['job_id']); ?>" class="view">查看报名情况</a>
 		</div>
+		<?php } ?>
 	</div>
 
 	<div class="return-box">

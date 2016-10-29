@@ -36,7 +36,7 @@
 	</div>
 
 	<div class="return-box">
-		<a href="javascript:;" class="return">返回</a>
+		<a href="<?php echo base_url('leader'); ?>" class="return">返回</a>
 	</div>
 
 	<script type="text/javascript" src="<?php echo base_url();?>js/zepto.min.js"></script>
