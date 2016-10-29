@@ -11,54 +11,53 @@
 	<div class="content">
 		<div class="item title clearfix">
 			<div>
-				<span>网页开发</span>
+				<span>兼职名称</span>
 			</div>
-			<p>四年生活试卷推广</p>
+			<p><?php echo $job['name']; ?></p>
 		</div>
 		<div class="item clearfix">
 			<div>
 				<span>工作日期</span>
 			</div>
-			<p>2016.9.8 至 2016.9.18</p>
+			<p><?php echo $job['start_date']."至".$job['end_date']; ?></p>
 		</div>
 		<div class="item clearfix">
 			<div>
 				<span>兼职时段</span>
 			</div>
-			<p>上班时间不限，完成任务即可</p>
+			<p><?php echo $job['period']=='anytime'?"具体工作时间不限,完成工作即可":$job['period']; ?></p>
 		</div>
 		<div class="item clearfix">
 			<div>
 				<span>工作地点</span>
 			</div>
-			<p>就在校内，各个楼栋即可完成</p>
+			<p><?php echo $job['site']=='anywhere'?"具体工作地点不限,完成工作即可":$job['site']; ?></p>
 		</div>
 		<div class="item clearfix">
 			<div>
 				<span>招聘人数</span>
 			</div>
-			<p>100&nbsp;&nbsp;&nbsp;人</p>
+			<p><?php echo $job['number']; ?>&nbsp;&nbsp;&nbsp;人</p>
 		</div>
 		<div class="item clearfix">
 			<div>
 				<span>工资待遇</span>
 			</div>
-			<p>销售额提成10%，奖金5%</p>
+			<p><?php echo $job['salary']; ?></p>
 		</div>
 		<div class="item clearfix">
 			<div>
 				<span>工作要求</span>
 			</div>
 			<ul>
-				<li>1、销售期每天都要努力工作；</li>
-				<li>2、要懂得沟通。</li>
+			<?php echo $job['requirement']; ?>
 			</ul>
 		</div>
 	</div>
 
 	<div class="bottom-bar">
-		<a href="javascript:;">发布兼职</a>
-		<a href="javascript:;">商家中心</a>
+		<a href="<?php echo base_url('business/job_list'); ?>">发布兼职</a>
+		<a href="<?php echo base_url('business'); ?>">商家中心</a>
 	</div>
 </body>
 </html>

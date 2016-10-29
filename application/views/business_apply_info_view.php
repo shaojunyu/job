@@ -10,8 +10,7 @@
 <body>
 	<div class="container">
 		<div class="status clearfix">
-			<p>已报名人数&nbsp;&nbsp;&nbsp;<span>8人</span></p>
-			<p>正在审核</p>
+			<p>已报名人数&nbsp;&nbsp;&nbsp;<span><?php echo count($job_apply); ?>人</span></p>
 		</div>
 
 		<div class="details">
@@ -20,18 +19,19 @@
 				<span>手机号</span>
 				<span>QQ号</span>
 			</div>
-
+			<?php foreach ($job_apply as $apply) { ?>
 			<div class="content clearfix">
-				<span>华小科</span>
-				<span>13166668888</span>
-				<span>1234567890</span>
+				<span><?php echo $apply['name']; ?></span>
+				<span><?php echo $apply['cellphone']; ?></span>
+				<span><?php echo $apply['QQ']; ?></span>
 			</div>
+			<?php } ?>
 		</div>
 	</div>
 
 	<div class="bottom-bar">
-		<a href="javascript:;">发布兼职</a>
-		<a href="javascript:;">商户中心</a>
+		<a href="<?php echo base_url('business/job_list'); ?>">发布兼职</a>
+		<a href="<?php echo base_url('business'); ?>">商户中心</a>
 	</div>
 </body>
 </html>

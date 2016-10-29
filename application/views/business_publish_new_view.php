@@ -87,8 +87,8 @@
 		</div>
 	</form>
 	<div class="bottom-bar clearfix">
-		<a href="javascript:;">发布兼职</a>
-		<a href="javascript:;">商户中心</a>
+		<a href="<?php echo base_url('business/job_list'); ?>">发布兼职</a>
+		<a href="<?php echo base_url('business'); ?>">商户中心</a>
 	</div>
 
 	<!-- 弹出消息 -->

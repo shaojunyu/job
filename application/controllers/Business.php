@@ -44,6 +44,46 @@ class Business extends CI_Controller{
     	}
     }
 
+    public function job_info($job_id = '')
+    {
+    	if ($this->session->userdata('business')) {
+    		$res = $this->db->where('id',$job_id)->get('job_job')->result_array();
+    		$res = $res[0];
+    		$this->load->view('business_job_info_view',[
+    			'job'=>$res
+    			]);
+    	}else{
+    		header('Location: '.base_url('business/login'));
+    	}
+    }
+
+    public function apply_info($job_id='')
+    {
+    	if ($this->session->userdata('business')) {
+    		$res = $this->db->where('id',$job_id)->get('job_apply')->result_array();
+    		// $res = $res[0];
+    		$this->load->view('business_apply_info_view',[
+    			'job_apply'=>$res
+    			]);
+    	}else{
+    		header('Location: '.base_url('business/login'));
+    	}
+    }
+
+    public function pay($job_id = '')
+    {
+    	if ($this->session->userdata('business')) {
+    		$res = $this->db->where('id',$job_id)->get('job_job')->result_array();
+    		$res = $res[0];
+    		$this->load->view('business_job_info_view',[
+    			'job'=>$res
+    			]);
+    	}else{
+    		header('Location: '.base_url('business/login'));
+    	}
+    	# code...
+    }
+
     public function submit_job()
     {
     	if (!$this->session->userdata('business')) {
