@@ -116,13 +116,19 @@ $(function () {
 		else if($(this).html() !== "获取验证码") {
 			return;
 		}
+		getDisable();
 		//发送验证码
 		var phoneNum = $(".phone").val().split("-").join("");
-		var data = {
-			cellphone: phoneNum
-		};
-		
-		
+		$.ajax({
+			url: "../api/send_sms_code/" + phoneNum,
+			type: "GET",
+			success: function(data) {
+	        	
+	        },
+	        error: function(XMLHttpRequest, textStatus, errorThrown){  
+		        showMsg("请求失败，请重试"); 
+		    }
+		});
 	});
 
 	//验证码登录
@@ -141,7 +147,24 @@ $(function () {
 			return;
 		}
 
+		var phoneNum = $(".phone").val().split("-").join("");
+		var smsCode = $(".codes").val();
 		//发送验证码登录请求
+		$.ajax({
+			url: "../api/sms_code_login/" + phoneNum + "/" + smsCode,
+			type: "GET",
+			success: function(data) {
+	        	if(data.success) {
+	        		window.location.href = "../user/myself";
+	        	}
+	        	else {
+	        		showMsg(data.msg);
+	        	}
+	        },
+	        error: function(XMLHttpRequest, textStatus, errorThrown){  
+		        showMsg("请求失败，请重试"); 
+		    }
+		});
 	});
 
 	//登录方式切换
@@ -149,7 +172,6 @@ $(function () {
 	var $loginByPasswd = $(".login-passwd");
 	$loginByCodes.tap(function () {
 		$(this).hide();
-		$(".phone").val("");
 		$(".password").val("");
 		$(".codes").val("");
 		$(".password-box").hide();
@@ -160,7 +182,6 @@ $(function () {
 	});
 	$loginByPasswd.tap(function () {
 		$(this).hide();
-		$(".phone").val("");
 		$(".password").val("");
 		$(".codes").val("");
 		$(".codes-box").hide();
