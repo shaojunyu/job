@@ -21,6 +21,14 @@
 			</div>
 		</div>
 		<?php } ?>
+
+		<div class="job">
+			<p class="title">四年生活线下试卷销售</p>
+			<p class="detailed">发布时间：<span class="time">2016.09.19 23:39</span>&nbsp;&nbsp;<a href="javascript:;">查看详情 ></a></p>
+			<div class="link-box clearfix">
+				<div class="pay"><a href="javascript:;">支付押金</a></div>
+			</div>
+		</div>
 	</div>
 
 	<div class="release-wrapper"><a href="<?php echo base_url('business/publish_new'); ?>" class="release">发布新的兼职</a></div>

@@ -51,6 +51,15 @@ body {
 	border-radius: 5px;
 	margin: 0 auto;
 }
+.pay {
+	float: none!important;
+	width: 50%;
+	margin: 0 auto;
+}
+.pay a {
+	display: block;
+	width: 100%;
+}
 
 /* release */
 .release-wrapper {
