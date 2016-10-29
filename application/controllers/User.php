@@ -148,4 +148,12 @@ class User extends CI_Controller{
             //header('Location:'.base_url().'user/myself');
         }
     }
+
+
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        header('Location:'.base_url().'user/index');
+        # code...
+    }
 }

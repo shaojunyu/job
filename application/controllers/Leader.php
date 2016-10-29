@@ -17,6 +17,7 @@ class Leader extends CI_Controller{
     }
     public function index(){
         $res = $this->db->where('leader_cellphone',$this->session->userdata('cellphone'))->get('job_leader')->result_array();
+        // var_dump($res);
         $this->load->view('leader_view',[
             'my_leading_jobs'=>$res
             ]);
@@ -43,9 +44,21 @@ class Leader extends CI_Controller{
         # code...
     }
 
-    public function get_apply_link($job_id)
+    public function get_apply_link($job_id = '')
     {
-        
+        // var_dump($this->session->userdata());
         # code...
+        $this->db->where('leader_cellphone',$this->session->userdata('cellphone'))->where('job_id',$job_id);
+        $res = $this->db->get('job_leader')->result_array();
+        if (empty($res[0]['code'])) {
+            $this->db->where('leader_cellphone',$this->session->userdata('cellphone'))->where('job_id',$job_id);
+            $code = 'j'.$job_id.'u'.$this->session->userdata('job_user_id');
+            $this->db->update('job_leader',[
+                'code'=>$code
+                ]);
+            echo base_url('apply/job/'.$code);
+        }else{
+            echo base_url('apply/job/'.$res[0]['code']);
+        }
     }
 }
