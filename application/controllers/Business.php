@@ -133,7 +133,13 @@ class Business extends CI_Controller{
 
     public function cooperation()
     {
-
+    	$post = $this->input->post();
+    	if (count($post) == 5) {
+    		$post['password'] = $post['cellphone'];
+    		$this->db->insert('job_business',$post);
+    		echo "ok";
+    		exit();
+    	}
     	$this->load->view('business_cooperation_view');
     	# code...
     }
