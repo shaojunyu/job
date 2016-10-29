@@ -24,7 +24,13 @@ class Leader extends CI_Controller{
 
     public function apply_info($job_id='')
     {
-        $this->load->view('leader_apply_info_view');
+        $this->db->where('leader_cellphone',$this->session->userdata('cellphone'))->where('job_id',$job_id);
+        $res = $this->db->get('job_apply')->result_array();
+
+        // echo count($res);
+        $this->load->view('leader_apply_info_view',[
+            'applied_users'=>$res
+            ]);
     }
 
     public function job_info($job_id='')
@@ -34,6 +40,12 @@ class Leader extends CI_Controller{
         $this->load->view('leader_job_info_view',[
             'job'=>$res
             ]);
+        # code...
+    }
+
+    public function get_apply_link($job_id)
+    {
+        
         # code...
     }
 }

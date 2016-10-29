@@ -10,13 +10,8 @@
 <body>
 	<div class="content">
 		<div class="title clearfix">
-			<p>已报名人数&nbsp;&nbsp;<span>8人</span></p>
-			<p>最终人数&nbsp;&nbsp;<span>6人</span></p>
-			<p>您的收益为&nbsp;&nbsp;<span>70元</span></p>
-			<p><a href="javascript:;" class="transfer">转到余额</a></p>
+			<p>已报名人数&nbsp;&nbsp;<span><?php echo count($applied_users); ?>人</span></p>
 		</div>
-
-		<p class="prompt">提示：收益会在后台确认此兼职确实参与之后显示</p>
 
 		<table class="participation-box">
 			<tr>
@@ -26,12 +21,14 @@
 				<th>状态</th>
 			</tr>
 
+			<?php foreach ($applied_users as $user) { ?>
 			<tr>
-				<td>华小科</td>
-				<td>13166668888</td>
-				<td>123456789</td>
-				<td>确认参与</td>
+				<td><?php echo $user['username']; ?></td>
+				<td><?php echo $user['cellphone']; ?></td>
+				<td><?php echo $user['QQ']; ?></td>
+				<td></td>
 			</tr>
+			<?php } ?>
 		</table>
 	</div>
 

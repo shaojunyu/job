@@ -17,7 +17,7 @@
 			$res = $this->db->where('id',$leading_job['job_id'])->limit(1)->get('job_job')->result_array();
 			$res = $res[0];
 		?>
-		<div class="part-time-job-item">
+		<div class="part-time-job-item" job_id="<?php echo $leading_job['job_id']; ?>">
 			<p class="job"><?php echo $res['name']; ?></p>
 			<p class="detailed-info">发布时间：<?php echo $res['create_at']; ?> <a href="<?php echo base_url('leader/job_info/'.$leading_job['job_id']); ?>">&nbsp;&nbsp;详细信息 ></a></p>
 			<a href="javascript:;" class="create-link">马上招人，生成我的派单链接</a>
