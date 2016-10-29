@@ -120,7 +120,7 @@ class Api extends CI_Controller{
                 //状态为0，说明短信发送成功
                 $this->db->insert('sms_code',[
                     'cellphone'=>$cellphone,
-                    'code'=>$code
+                    'sms_code'=>$code
                     ]);
                 // echo "短信发送成功,短信ID：".$result['result']['sid'];
                 $this->echo_msg(true);
