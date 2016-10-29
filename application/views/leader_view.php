@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<title>领队管理</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/reset.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/leader.css">
 </head>
 <body>
@@ -17,7 +16,7 @@
 			$res = $this->db->where('id',$leading_job['job_id'])->limit(1)->get('job_job')->result_array();
 			$res = $res[0];
 		?>
-		<div class="part-time-job-item" job_id="<?php echo $leading_job['job_id']; ?>">
+		<div class="part-time-job-item" data-job-id="<?php echo $leading_job['job_id']; ?>">
 			<p class="job"><?php echo $res['name']; ?></p>
 			<p class="detailed-info">发布时间：<?php echo $res['create_at']; ?> <a href="<?php echo base_url('leader/job_info/'.$leading_job['job_id']); ?>">&nbsp;&nbsp;详细信息 ></a></p>
 			<a href="javascript:;" class="create-link">马上招人，生成我的派单链接</a>
@@ -33,5 +32,17 @@
 		<a href="<?php echo base_url('/user/myjob');?>">我的兼职</a>
 		<a href="<?php echo base_url('/user/myself');?>">个人中心</a>
 	</div>
+
+	<!-- 弹出消息 -->
+	<div class="cover"></div>
+	<div class="prompt-box">
+		<p class="prompt-title">复制链接</p>
+		<p class="prompt"></p>
+		<a href="javascript:;" class="close">关闭</a>
+	</div>
+
+	<script type="text/javascript" src="<?php echo base_url();?>js/zepto.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/touch.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/leader.js"></script>
 </body>
 </html>
