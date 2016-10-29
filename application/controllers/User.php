@@ -7,9 +7,12 @@
  */
 class User extends CI_Controller{
     public function index(){
-        if ( empty($this->session->userdata('cellphone')) ){
+        if ($this->session->userdata('business')) {
+            header('Location:'.base_url('business'));
+        }elseif ( empty($this->session->userdata('cellphone')) ){
             $this->load->view('index_view');
         }else{
+            // var_dump($this->session->userdata());
             header('Location:'.base_url().'user/myself');
         }
     }
