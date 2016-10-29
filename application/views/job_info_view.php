@@ -57,8 +57,8 @@
 	</div>
 
 	<div class="bottom-bar">
-		<a href="javascript:;">我的兼职</a>
-		<a href="<?php echo base_url('/user/myself');?>">个人中心</a>
+		<a href="javascript:;">发布兼职</a>
+		<a href="javascript:;">商家中心</a>
 	</div>
 </body>
 </html>
