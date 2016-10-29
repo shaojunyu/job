@@ -26,6 +26,12 @@ class Api extends CI_Controller{
         }
     }
 
+    public function sms_code_login($cellphone='',$sms_code='')
+    {
+        $this->db->where('cellphone',$cellphone)->where('sms_code',$sms_code)->where('used','NO');
+        $res = $this->db->get('sms_code')->result_array();
+    }
+
     public function submit_info(){
         try{
             $this->db->trans_start();
