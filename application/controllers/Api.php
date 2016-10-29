@@ -30,6 +30,28 @@ class Api extends CI_Controller{
     {
         $this->db->where('cellphone',$cellphone)->where('sms_code',$sms_code)->where('used','NO');
         $res = $this->db->get('sms_code')->result_array();
+        if (count($res) == 1) {
+            $this->load->model('User_model');
+            $this->User_model->sms_code_login($cellphone);
+            $this->db->where('cellphone',$cellphone)->where('sms_code',$sms_code)->where('used','NO');
+            $this->db->update('sms_code',['used'=>'YES']);
+            $this->echo_msg(true);
+        }else{
+            $this->echo_msg(false);
+        }
+    }
+
+    public function verify_sms_code($cellphone='',$sms_code='')
+    {
+        $this->db->where('cellphone',$cellphone)->where('sms_code',$sms_code)->where('used','NO');
+        $res = $this->db->get('sms_code')->result_array();
+        if (count($res) == 1) {
+            $this->db->where('cellphone',$cellphone)->where('sms_code',$sms_code)->where('used','NO');
+            $this->db->update('sms_code',['used'=>'YES']);
+            $this->echo_msg(true);
+        }else{
+            $this->echo_msg(false);
+        }
     }
 
     public function submit_info(){
@@ -98,7 +120,7 @@ class Api extends CI_Controller{
                 //状态为0，说明短信发送成功
                 $this->db->insert('sms_code',[
                     'cellphone'=>$cellphone,
-                    'code'=>$code
+                    'sms_code'=>$code
                     ]);
                 // echo "短信发送成功,短信ID：".$result['result']['sid'];
                 $this->echo_msg(true);

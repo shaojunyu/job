@@ -37,6 +37,11 @@ class User_model extends CI_Model{
 
     }
 
+    public function sms_code_login($cellphone)
+    {
+        $this->userInfo2session($cellphone);
+    }
+
     public function wetchat_login($cellphone){
         $this->userInfo2session($cellphone);
         return true;
