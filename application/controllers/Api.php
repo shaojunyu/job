@@ -30,6 +30,28 @@ class Api extends CI_Controller{
     {
         $this->db->where('cellphone',$cellphone)->where('sms_code',$sms_code)->where('used','NO');
         $res = $this->db->get('sms_code')->result_array();
+        if (count($res) == 1) {
+            $this->load->model('User_model');
+            $this->User_model->sms_code_login($cellphone);
+            $this->db->where('cellphone',$cellphone)->where('sms_code',$sms_code)->where('used','NO');
+            $this->db->update('sms_code',['used'=>'YES']);
+            $this->echo_msg(true);
+        }else{
+            $this->echo_msg(false);
+        }
+    }
+
+    public function verify_sms_code($cellphone='',$sms_code='')
+    {
+        $this->db->where('cellphone',$cellphone)->where('sms_code',$sms_code)->where('used','NO');
+        $res = $this->db->get('sms_code')->result_array();
+        if (count($res) == 1) {
+            $this->db->where('cellphone',$cellphone)->where('sms_code',$sms_code)->where('used','NO');
+            $this->db->update('sms_code',['used'=>'YES']);
+            $this->echo_msg(true);
+        }else{
+            $this->echo_msg(false);
+        }
     }
 
     public function submit_info(){
