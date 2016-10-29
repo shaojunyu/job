@@ -1,4 +1,11 @@
 $(function () {
+	var url = window.location.href.slice(window.location.href.indexOf('?') + 1);
+	var hasCode = url.split('=')[0];
+	var codeVal = url.split('=')[1];
+	if(hasCode === "code") {
+		$(".phone").removeAttr("readonly");
+	}
+
 	//初始时手机号切分
 	var val = $.trim($(".phone").val());
 	var str = "";
@@ -75,6 +82,10 @@ $(function () {
 	        data: JSON.stringify(data),
 	        success: function(data) {
 	        	if(data.success) {
+	        		if(hasCode === "code") {
+	        			window.location.href = "../apply/job/"+codeVal;
+	        			return;
+	        		}
 	        		window.location.href = "../user/myself";
 	        	}
 				else {
