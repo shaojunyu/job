@@ -35,8 +35,13 @@
 		</table>
 	</div>
 
-	<div class="return-box">
-		<a href="<?php echo base_url('leader'); ?>" class="return">返回</a>
+	<!-- <div class="return-box">
+		<a href="" class="return">返回</a>
+	</div> -->
+
+	<div class="bottom-bar">
+		<a href="<?php echo base_url('/user/myjob');?>">我的兼职</a>
+		<a href="<?php echo base_url('/user/myself');?>">个人中心</a>
 	</div>
 
 	<script type="text/javascript" src="<?php echo base_url();?>js/zepto.min.js"></script>
