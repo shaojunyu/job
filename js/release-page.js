@@ -97,6 +97,7 @@ $(function () {
 			$(".site").val("anywhere");
 		}
 		
+
 		$("form").submit();
 	});
 });
@@ -107,7 +108,7 @@ function showMsg(msg) {
 	$(".prompt-box").show();
 	setTimeout(function () {
 		hideMsg();
-	}, 3000);
+	}, 1700);
 }
 
 //消息显示框隐藏
